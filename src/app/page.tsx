@@ -1,14 +1,10 @@
 import styles from './page.module.scss';
-
-// import { Landing } from './Landing';
 import { Button, Grid, GridColumn, GridRow } from '@arctic-kit/snow';
 import { Feature } from '@/components/Feature';
 import { LottieAnimation, LottieSkeleton } from '@/components/LottieAnimation';
 import animationData from '@/assets/lottie/design_system.json';
 import { Suspense } from 'react';
 import { SnowEffect } from '@/components/SnowEffect';
-
-// import LogoSrc from './logo.png';
 
 export default function Home() {
   return (

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import AppLogoSrc from '@/assets/logo.png';
 import styles from './Header.module.scss';
 import Link from 'next/link';
 import GithubLogo from '@/assets/icons/github.svg';
@@ -9,7 +8,7 @@ export function Header() {
   return (
     <header className={styles.container}>
       <section className={styles.left}>
-        <Image alt='logo' src={AppLogoSrc} width={40} />
+        <Image alt='logo' src='/images/logo.png' width={40} height={40} />
         <span className={styles.title}>Arctic Design</span>
       </section>
       <section className={styles.center}>

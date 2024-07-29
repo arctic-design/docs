@@ -4,7 +4,6 @@ import { withPigment, extendTheme } from '@pigment-css/nextjs-plugin';
 import { DEFAULT_THEME } from '@arctic-kit/snow';
 
 const nextConfig = {
-  output: 'export',
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
