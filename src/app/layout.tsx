@@ -4,7 +4,7 @@ import './globals.css';
 import '@pigment-css/react/styles.css';
 import '@arctic-kit/snow/style.css';
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+// import { Footer } from '@/components/Footer';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -24,10 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={`${inter.className} antialiased`}>
         <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

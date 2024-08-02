@@ -4,14 +4,21 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && touch ./out/.nojekyll",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "serve": "serve -l 5005 -s out"
   },
   "dependencies": {
     "@arctic-kit/snow": "^0.6.2",
+    "@heroicons/react": "^2.1.5",
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.2.5",
     "@pigment-css/react": "^0.0.17",
+    "@types/mdx": "^2.0.13",
+    "gray-matter": "^4.0.3",
     "lottie-web": "^5.12.2",
     "next": "14.2.5",
     "react": "^18",
@@ -31,6 +38,7 @@
     "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
     "prettier": "3.3.3",
+    "serve": "^14.2.3",
     "typescript": "^5"
   },
   "lint-staged": {

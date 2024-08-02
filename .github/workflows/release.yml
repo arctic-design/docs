@@ -1,0 +1,38 @@
+name: Auto Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint_build_test_release:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: ./.github/actions/install-dependencies
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Build Next.js project
+        run: yarn build
+
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v4
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./out
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: out # output folder from `yarn build`

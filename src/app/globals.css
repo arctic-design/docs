@@ -1,3 +1,7 @@
+:root {
+  --header-height: 3rem;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
