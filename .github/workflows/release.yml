@@ -23,16 +23,10 @@ jobs:
         run: yarn lint
 
       - name: Build Next.js project
-        run: yarn build
-
-      # - name: Deploy
-      #   uses: peaceiris/actions-gh-pages@v4
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./out
+        run: yarn build:github
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: out # output folder from `yarn build`
+          folder: out # output folder from `yarn build:github`

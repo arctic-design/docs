@@ -1,3 +1,6 @@
+![Build Status](https://github.com/arctic-design/docs/actions/workflows/release.yml/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fa44b58d-2a89-4227-887a-f695b7e35503/deploy-status)](https://app.netlify.com/sites/arctic-design/deploys)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
