@@ -1,0 +1,13 @@
+.paginationFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: var(--snow-colors-grey-900);
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 16px;
+
+  .hidden {
+    width: 0;
+  }
+}

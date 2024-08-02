@@ -1,6 +1,6 @@
 .main {
   width: 100vw;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - var(--header-height));
   overflow-y: auto;
 }
 .header {
@@ -33,7 +33,23 @@
     p {
       color: rgb(94, 95, 110);
       font-size: 1rem; // default size for small screens
-      line-height: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .actionButton {
+      background-color: var(--snow-colors-primary-main);
+      color: var(--snow-colors-neutral-0);
+      padding: 10px 20px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      &:hover {
+        background-color: var(--snow-colors-primary-600);
+        color: var(--snow-colors-neutral-0);
+        font-weight: 500;
+      }
     }
   }
 
