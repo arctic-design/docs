@@ -4,13 +4,15 @@ import Link from 'next/link';
 import GithubLogo from '@/assets/icons/github.svg';
 import { SnowLink } from '@/components/SnowLink';
 
+const basePath = process.env.NEXT_PUBLIC_ASSET_PREFIX || '';
+
 export function Header() {
   return (
     <header className={styles.container}>
       <section className={styles.left}>
         <Image
           alt='logo'
-          src='/images/apple-touch-icon.png'
+          src={`${basePath}/images/apple-touch-icon.png`}
           width={40}
           height={40}
           priority
