@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && touch ./out/.nojekyll",
+    "build:github": "NEXT_PUBLIC_BASE_PATH='/docs' NEXT_PUBLIC_ASSET_PREFIX='/docs' yarn build",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
