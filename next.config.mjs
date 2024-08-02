@@ -1,8 +1,8 @@
-/** @type {import('next').NextConfig} */
-
+import createMDX from '@next/mdx';
 import { withPigment, extendTheme } from '@pigment-css/nextjs-plugin';
 import { DEFAULT_THEME } from '@arctic-kit/snow';
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack(config) {
     config.module.rules.push({
@@ -12,18 +12,22 @@ const nextConfig = {
 
     return config;
   },
+  pageExtensions: ['js', 'jsx', 'mdx', 'md', 'ts', 'tsx'],
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
 };
 
-// export default nextConfig;
+const withMDX = createMDX({
+  extension: /\.(md|mdx)?$/,
+});
 
-export default withPigment(
-  {
-    ...nextConfig,
-  },
-  {
-    theme: extendTheme({
-      ...DEFAULT_THEME,
-      cssVarPrefix: 'snow',
-    }),
-  },
-);
+const nextConfigWithMdx = withMDX(nextConfig);
+
+export default withPigment(nextConfigWithMdx, {
+  theme: extendTheme({
+    ...DEFAULT_THEME,
+    cssVarPrefix: 'snow',
+  }),
+});

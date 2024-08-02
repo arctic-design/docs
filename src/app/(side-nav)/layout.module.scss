@@ -1,0 +1,15 @@
+.app {
+  display: flex;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  flex-grow: 1;
+  max-height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+}
