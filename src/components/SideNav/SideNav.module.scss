@@ -4,7 +4,7 @@
     left: 0;
     top: calc(var(--header-height) + 1px);
     height: 100%;
-    width: 250px;
+    width: var(--side-nav-width);
     border-right: 1px solid var(--snow-colors-grey-100);
     color: var(--snow-colors-grey-900);
     padding: 0.5rem;

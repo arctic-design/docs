@@ -1,6 +1,7 @@
 :root {
   --header-height: 3rem;
   --header-padding-left: 54px;
+  --side-nav-width: 220px;
 }
 
 * {
@@ -13,7 +14,6 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   background: linear-gradient(90deg, #ffffff 0%, #f9fcfe 50%, #f0f9ff 100%);
 }
