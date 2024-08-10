@@ -1,12 +1,11 @@
 'use client';
-import Link from 'next/link';
+
 import styles from './Pagination.module.scss';
 import { FlatRoute } from '@/types';
 import { usePathname } from 'next/navigation';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import { SnowLink } from '@/components/SnowLink';
 import { useMemo } from 'react';
-import { Box } from '@arctic-kit/snow';
 
 interface PaginationProps {
   routes: FlatRoute[];
@@ -14,9 +13,10 @@ interface PaginationProps {
 
 export const Pagination: React.FC<PaginationProps> = ({ routes }) => {
   const currentPath = usePathname();
+
   // Filter out routes with empty paths
   const validRoutes = useMemo(
-    () => routes.filter((route) => route.path),
+    () => routes.filter((route) => route.path && route.clickable),
     [routes],
   );
 

@@ -1,0 +1,65 @@
+import FontImportStep from './font-step';
+import Example from './example';
+import { CodeBlockSection } from '@/components/CodeBlock';
+
+## Installation Guide
+
+Integrate the `@arctic-kit/snow` library into your project by following these steps. This guide covers installation via both `yarn` and `npm`, setting up fonts, configuring styles, and using a component.
+
+### 1. Install
+
+Choose your preferred package manager to install the library.
+
+- **Using Yarn:**
+
+<CodeBlockSection>{`yarn add @arctic-kit/snow`}</CodeBlockSection>
+
+- **Using NPM:**
+
+<CodeBlockSection>{`npm install @arctic-kit/snow`}</CodeBlockSection>
+
+### 2. Fonts Setup
+
+To ensure the components render correctly, include the necessary font files in your project. Instead of using `<link>` tags, we'll use the `@fontsource` package to import the fonts directly into your styles:
+
+- **Install Fontsource Package:**
+
+  - **Using Yarn:**
+
+  <CodeBlockSection>{`yarn add @fontsource/inter`}</CodeBlockSection>
+
+  - **Using NPM:**
+
+  <CodeBlockSection>{`npm install @fontsource/inter`}</CodeBlockSection>
+
+- **Import Fonts in Your Styles:**
+
+  In your project's main stylesheet or root file (like `index.ts` for Vite), add the following imports:
+
+  <FontImportStep />
+
+### 3. Configuration
+
+Import the primary stylesheet to apply the default styles provided by `@arctic-kit/snow`. The method varies based on your project setup:
+
+- **For Vite:**
+
+  In your `main.js` or equivalent entry file, add:
+
+  <CodeBlockSection>{`import '@arctic-kit/snow/style.css';`}</CodeBlockSection>
+
+- **For Next.js:**
+
+  In your `pages/_app.js` or `pages/_app.tsx`, include:
+
+  <CodeBlockSection>{`import '@arctic-kit/snow/style.css';`}</CodeBlockSection>
+
+### 4. Using a Component
+
+Once installed and configured, you can start using components from the library. Here's an example of how to use the `Button` component:
+
+<Example />
+
+---
+
+By following these steps, you should have `@arctic-kit/snow` seamlessly integrated into your project. For more detailed information and advanced configurations, refer to the [official documentation](https://github.com/arctic-kit/snow).

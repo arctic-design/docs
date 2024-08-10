@@ -31,6 +31,7 @@
 
   .center {
     display: none;
+    display: flex;
     align-items: center;
     gap: 8px;
   }
@@ -41,15 +42,20 @@
   }
 }
 
+@media (max-width: 768px) {
+  .container {
+    .center {
+      display: none;
+    }
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container {
     .left {
       .title {
         font-size: 1.25rem;
       }
-    }
-    .center {
-      display: flex;
     }
   }
 }

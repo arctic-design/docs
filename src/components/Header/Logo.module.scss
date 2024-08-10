@@ -1,0 +1,12 @@
+.container {
+  &.shift {
+    transition: margin-left 0.15s ease;
+    // transform: translateX(0);
+  }
+  @media (max-width: 768px) {
+    &.shift {
+      margin-left: 40px;
+      //   transform: translateX(40px);
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { fetchRoutes } from './action';
 import { Suspense } from 'react';
 import styles from './layout.module.scss';
 import { Pagination } from '@/components/Pagination';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 export default async function Layout({
   children,
@@ -18,6 +19,7 @@ export default async function Layout({
       </Suspense>
 
       <div className={styles.content}>
+        <Breadcrumb routes={routes} />
         {children}
         <Pagination routes={flatRoutes} />
       </div>

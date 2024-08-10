@@ -1,6 +1,7 @@
 export interface FlatRoute {
   path: string;
   label: string;
+  clickable?: boolean;
 }
 
 export interface Route extends FlatRoute {
