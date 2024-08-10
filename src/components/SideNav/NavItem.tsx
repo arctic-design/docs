@@ -6,12 +6,6 @@ import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 import styles from './SideNav.module.scss';
 import { Route } from '@/types';
 
-// interface Route {
-//   path: string;
-//   label: string;
-//   children?: Route[];
-// }
-
 interface NavItemProps {
   route: Route;
   isOpen: boolean;
