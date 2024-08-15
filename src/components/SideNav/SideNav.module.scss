@@ -2,13 +2,14 @@
   .sideNav {
     position: fixed;
     left: 0;
-    top: calc(var(--header-height) + 1px);
-    height: 100%;
+    top: var(--header-height);
+    height: calc(100% - var(--header-height));
     width: var(--side-nav-width);
     border-right: 1px solid var(--snow-colors-grey-100);
     color: var(--snow-colors-grey-900);
     padding: 0.5rem;
     transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
 
     .navLinks {
       display: flex;
@@ -100,7 +101,7 @@
         display: block;
         background-color: #fff;
         position: relative;
-        z-index: 1;
+        z-index: 1501;
         .sideNav {
           transform: translateX(0);
         }

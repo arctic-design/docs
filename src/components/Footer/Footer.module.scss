@@ -7,4 +7,22 @@
   //   position: fixed;
   width: 100%;
   //   bottom: 0;
+
+  .builtBy {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // gap: 4px;
+    font-size: 12px;
+    a {
+      color: white;
+      font-size: 12px;
+
+      padding-left: 4px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

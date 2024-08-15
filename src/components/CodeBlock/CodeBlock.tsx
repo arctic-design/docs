@@ -59,15 +59,14 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
         </button>
       </section>
 
-      {isCodeVisible && (
-        <CodeBlockSection
-          onCopy={handleCopy}
-          language={language}
-          showLineNumbers={showLineNumbers}
-        >
-          {children}
-        </CodeBlockSection>
-      )}
+      <CodeBlockSection
+        onCopy={handleCopy}
+        language={language}
+        showLineNumbers={showLineNumbers}
+        visible={isCodeVisible}
+      >
+        {children}
+      </CodeBlockSection>
     </div>
   );
 };

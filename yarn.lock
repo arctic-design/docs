@@ -15,9 +15,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@arctic-kit/snow@npm:^0.6.2":
-  version: 0.6.2
-  resolution: "@arctic-kit/snow@npm:0.6.2"
+"@arctic-kit/snow@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "@arctic-kit/snow@npm:0.7.0"
   peerDependencies:
     framer-motion: ^11.3.19
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -29,7 +29,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/98e4c388b8dbc925b53587b5074e7e4c0d058f674aa2cf714a32f137f0246fcc90256c60d4e928ab382732b9afbd8d7f748b28f938fae43f3aa76cb26ab5238c
+  checksum: 10c0/f89a9da5d5715170f2e76e3ff2918398539d1b72cd02f11b87c469b90e165b3d6593308eaa1801f4f9fd7a41de1cbb9babf0389243902d106e65d52a7cba88bd
   languageName: node
   linkType: hard
 
@@ -3861,7 +3861,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "docs@workspace:."
   dependencies:
-    "@arctic-kit/snow": "npm:^0.6.2"
+    "@arctic-kit/snow": "npm:^0.7.0"
     "@heroicons/react": "npm:^2.1.5"
     "@mdx-js/loader": "npm:^3.0.1"
     "@mdx-js/react": "npm:^3.0.1"

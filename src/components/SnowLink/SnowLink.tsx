@@ -6,6 +6,7 @@ type SnowLinkProps = {
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
   className?: string;
   href: string;
+  target?: string;
 };
 export const SnowLink = forwardRef<
   HTMLAnchorElement,
