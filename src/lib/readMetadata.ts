@@ -44,9 +44,10 @@ const readMetadata = (dirPath: string, basePath = ''): RouteMetadata[] => {
       const routePath = path.join(basePath, item).replace(/\\/g, '/');
       const dirMetadata = readDirectoryMetadata(fullPath);
 
-      const pathUrl = hasPageFile(fullPath) ? `/${routePath}` : '';
+      // const pathUrl = hasPageFile(fullPath) ? `/${routePath}` : '';
       results.push({
-        path: pathUrl,
+        path: `/${routePath}`,
+        clickable: hasPageFile(fullPath),
         label:
           dirMetadata.label ||
           item
@@ -66,7 +67,11 @@ export const flattenRoutes = (routes: RouteMetadata[]): FlatRoute[] => {
   const flatRoutes: FlatRoute[] = [];
 
   const traverseRoutes = (route: RouteMetadata) => {
-    flatRoutes.push({ path: route.path, label: route.label });
+    flatRoutes.push({
+      path: route.path,
+      label: route.label,
+      clickable: route.clickable,
+    });
     if (route.children) {
       route.children.forEach(traverseRoutes);
     }

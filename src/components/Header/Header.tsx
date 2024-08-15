@@ -1,24 +1,18 @@
-import Image from 'next/image';
 import styles from './Header.module.scss';
 import Link from 'next/link';
 import GithubLogo from '@/assets/icons/github.svg';
 import { SnowLink } from '@/components/SnowLink';
-
-const basePath = process.env.NEXT_PUBLIC_ASSET_PREFIX || '';
+import { Logo } from './Logo';
+import { Suspense } from 'react';
+import { LogoSkeleton } from './LogoSkeleton';
 
 export function Header() {
   return (
     <header className={styles.container}>
       <section className={styles.left}>
-        <Image
-          alt='logo'
-          src={`${basePath}/images/apple-touch-icon.png`}
-          width={40}
-          height={40}
-          priority
-          // placeholder='blur'
-          // blurDataURL='/images/logo-16x16.png'
-        />
+        <Suspense fallback={<LogoSkeleton />}>
+          <Logo />
+        </Suspense>
 
         <SnowLink href='/' className={styles.title}>
           Arctic Design
@@ -26,7 +20,8 @@ export function Header() {
       </section>
       <section className={styles.center}>
         <SnowLink href='/getting-started/overview'>Get Started</SnowLink>
-        <SnowLink href='#'>Guides</SnowLink>
+        <SnowLink href='/foundations/colors'>Foundations</SnowLink>
+        <SnowLink href='/components'>Components</SnowLink>
       </section>
       <section className={styles.right}>
         <Link

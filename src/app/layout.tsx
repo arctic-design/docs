@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import './globals.scss';
 import '@pigment-css/react/styles.css';
 import '@arctic-kit/snow/style.css';
 import { Header } from '@/components/Header';

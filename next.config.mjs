@@ -1,6 +1,7 @@
 import createMDX from '@next/mdx';
 import { withPigment, extendTheme } from '@pigment-css/nextjs-plugin';
 import { DEFAULT_THEME } from '@arctic-kit/snow';
+import path from 'path';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,6 +9,18 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
+    });
+
+    // config.module.rules.push({
+    //   test: /\.(ts|tsx|jsx|js)$/, // Use asset/source for text content
+    //   resourceQuery: /source/,
+    //   type: 'asset/source',
+    // });
+
+    config.module.rules.push({
+      test: /\.(ts|tsx|jsx|js)$/,
+      resourceQuery: /raw/, // Applies only to imports with ?raw
+      use: path.resolve('./rawFileLoader.mjs'), // Use the custom loader
     });
 
     return config;

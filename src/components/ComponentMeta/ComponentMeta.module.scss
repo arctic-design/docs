@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 1rem 0;
+  .title {
+    font-weight: 900;
+    font-size: 2em;
+  }
+
+  .subTitle {
+    color: var(--snow-colors-grey-600);
+    font-size: 1.2em;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 4;
+    }
+  }
+
+  .usageContent {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 2em;
+    .usageContentTitle {
+      font-weight: 700;
+      font-size: 1.6em;
+    }
+  }
+}
