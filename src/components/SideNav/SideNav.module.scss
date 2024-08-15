@@ -85,6 +85,14 @@
     }
   }
 
+  @media (max-width: 400px) {
+    .overlay {
+      .sideNav {
+        width: 100%;
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     .overlay {
       .sideNav {
