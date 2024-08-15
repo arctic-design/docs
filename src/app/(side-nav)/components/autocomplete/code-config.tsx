@@ -102,7 +102,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Autocomplete',
-  subTitle:
-    'Enhances input fields by suggesting possible completions as users type, streamlining data entry and improving accuracy.',
 };

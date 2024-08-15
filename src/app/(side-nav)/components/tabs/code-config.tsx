@@ -151,7 +151,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Tabs',
-  subTitle:
-    'Organizes content into multiple sections with labeled tabs, allowing users to switch between views within the same context.',
 };

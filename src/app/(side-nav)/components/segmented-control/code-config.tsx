@@ -58,7 +58,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'SegmentedControl',
-  subTitle:
-    'Allows users to toggle between multiple, mutually exclusive options presented as segmented buttons.',
 };

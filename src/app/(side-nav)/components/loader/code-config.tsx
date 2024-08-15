@@ -40,7 +40,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Loader',
-  subTitle:
-    'Displays various animated indicators, like spinners and dots, to represent loading or processing states in the interface.',
 };

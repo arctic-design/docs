@@ -47,7 +47,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Alert',
-  subTitle:
-    'Displays contextual feedback messages for typical user actions with options for customizable appearance.',
 };

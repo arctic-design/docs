@@ -59,7 +59,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Checkbox',
-  subTitle:
-    'Enables users to select one or more options from a set, reflecting choices with a checkmark or other indicator.',
 };

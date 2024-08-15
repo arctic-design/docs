@@ -246,9 +246,6 @@ export const codeConfig: CodeConfigType = {
   propDefs: propDefs.filter(
     (item) => !['loadingText', 'errorText'].includes(item.name),
   ),
-  title: 'CardStack',
-  subTitle:
-    'Triggers an action or event in response to user interaction, with customizable styles and behaviors.',
 };
 
 export const withLoadingCodeConfig: CodeConfigType = {
@@ -259,9 +256,6 @@ export const withLoadingCodeConfig: CodeConfigType = {
   propDefs: propDefs.filter((item) =>
     ['title', 'loadingText', 'loading'].includes(item.name),
   ),
-  title: 'CardStack',
-  subTitle:
-    'Triggers an action or event in response to user interaction, with customizable styles and behaviors.',
 };
 
 export const withErrorCodeConfig: CodeConfigType = {
@@ -272,9 +266,6 @@ export const withErrorCodeConfig: CodeConfigType = {
   propDefs: propDefs.filter((item) =>
     ['title', 'errorText'].includes(item.name),
   ),
-  title: 'CardStack',
-  subTitle:
-    'Triggers an action or event in response to user interaction, with customizable styles and behaviors.',
 };
 
 export const withAccordionCodeConfig: CodeConfigType = {
@@ -285,7 +276,4 @@ export const withAccordionCodeConfig: CodeConfigType = {
   propDefs: propDefs.filter(
     (item) => !['loadingText', 'errorText'].includes(item.name),
   ),
-  title: 'CardStack',
-  subTitle:
-    'Triggers an action or event in response to user interaction, with customizable styles and behaviors.',
 };

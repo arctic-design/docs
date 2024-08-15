@@ -147,9 +147,6 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code: defaultCode,
   propDefs,
-  title: 'Popover',
-  subTitle:
-    'Displays a floating, contextual overlay anchored to a trigger element, providing additional information or actions.',
 };
 
 export const customTriggerCodeConfig: CodeConfigType = {
@@ -158,7 +155,4 @@ export const customTriggerCodeConfig: CodeConfigType = {
   maxWidth: 440,
   code: customTriggerCode,
   propDefs,
-  title: 'Popover',
-  subTitle:
-    'Displays a floating, contextual overlay anchored to a trigger element, providing additional information or actions.',
 };

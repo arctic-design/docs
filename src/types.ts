@@ -26,6 +26,10 @@ export interface CodeConfigType {
   maxWidth?: number;
   code: string;
   propDefs: ComponentPropDefs[];
+}
+
+export type MetaType = {
   title: string;
   subTitle: string;
-}
+  slug: string;
+};

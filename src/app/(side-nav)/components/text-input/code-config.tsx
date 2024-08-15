@@ -67,6 +67,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'TextInput',
-  subTitle: 'Offers a single-line input field for users to enter text or data.',
 };

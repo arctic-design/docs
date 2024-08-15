@@ -70,7 +70,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Chip',
-  subTitle:
-    'Presents small, interactive elements to display information, selections, or actions in a compact form.',
 };

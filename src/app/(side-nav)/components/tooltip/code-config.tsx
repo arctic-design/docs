@@ -56,7 +56,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Tooltip',
-  subTitle:
-    'Displays brief, contextual information when users hover over or focus on an element.',
 };

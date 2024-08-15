@@ -20,19 +20,10 @@ function Demo(props: CalendarProps) {
   return <Calendar {...props} selected={value} onSelect={setValue} />;
 }
 
-export const meta = {
-  title: 'Calendar',
-  subTitle:
-    'Displays dates in a structured format, allowing users to view, select, and interact with specific days.',
-};
-
 export const codeConfig: CodeConfigType = {
   component: Demo,
   centered: true,
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Calendar',
-  subTitle:
-    'Displays dates in a structured format, allowing users to view, select, and interact with specific days.',
 };

@@ -52,7 +52,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Paper',
-  subTitle:
-    'Provides a customizable surface with elevation or outlined variants to visually distinguish content with depth or borders.',
 };

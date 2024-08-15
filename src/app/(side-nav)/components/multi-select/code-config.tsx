@@ -106,9 +106,6 @@ export const codeConfig: CodeConfigType = {
   propDefs: propDefs.filter(
     (def) => !['errorText', 'required'].includes(def.name),
   ),
-  title: 'MultiSelect',
-  subTitle:
-    'Enables users to select multiple options from a dropdown or list, with the ability to display selected choices.',
 };
 
 export const errorStateCodeConfig: CodeConfigType = {
@@ -119,7 +116,4 @@ export const errorStateCodeConfig: CodeConfigType = {
   propDefs: propDefs.filter((def) =>
     ['errorText', 'required', 'label', 'placeholder'].includes(def.name),
   ),
-  title: 'MultiSelect',
-  subTitle:
-    'Enables users to select multiple options from a dropdown or list, with the ability to display selected choices.',
 };

@@ -213,7 +213,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Drawer',
-  subTitle:
-    'Displays a sliding panel from the edge of the screen, offering access to additional content or actions without leaving the current view.',
 };

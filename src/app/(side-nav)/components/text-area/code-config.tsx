@@ -60,7 +60,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'TextArea',
-  subTitle:
-    'Provides a multi-line text input field for users to enter larger amounts of text.',
 };

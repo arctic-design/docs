@@ -110,7 +110,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code: defaultCode,
   propDefs,
-  title: 'RadioGroup',
-  subTitle:
-    'Groups radio buttons, allowing users to select one option from a set of mutually exclusive choices.',
 };

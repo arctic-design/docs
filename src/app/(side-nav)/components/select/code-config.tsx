@@ -106,9 +106,6 @@ export const codeConfig: CodeConfigType = {
   propDefs: propDefs.filter(
     (def) => !['errorText', 'required'].includes(def.name),
   ),
-  title: 'Select',
-  subTitle:
-    'Enables users to choose a single option from a dropdown menu for streamlined selection.',
 };
 
 export const errorStateCodeConfig: CodeConfigType = {
@@ -119,7 +116,4 @@ export const errorStateCodeConfig: CodeConfigType = {
   propDefs: propDefs.filter((def) =>
     ['errorText', 'required', 'label', 'placeholder'].includes(def.name),
   ),
-  title: 'Select',
-  subTitle:
-    'Enables users to choose a single option from a dropdown menu for streamlined selection.',
 };

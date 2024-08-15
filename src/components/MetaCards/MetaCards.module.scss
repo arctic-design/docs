@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 12px;
+  padding: 4px;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+  }
+
+  .item {
+    padding: 16px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    color: var(--snow-colors-grey-900);
+    width: 100%;
+    max-width: 300px;
+    &:hover {
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .subTitle {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .item {
+      max-width: 100%;
+    }
+  }
+}

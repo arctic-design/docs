@@ -49,7 +49,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Tag',
-  subTitle:
-    'Displays a small, customizable label for categorization, filtering, or highlighting key information.',
 };

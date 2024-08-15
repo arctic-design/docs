@@ -133,7 +133,4 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Modals',
-  subTitle:
-    'Displays a focused overlay that temporarily interrupts the current workflow to present critical content or actions.',
 };
