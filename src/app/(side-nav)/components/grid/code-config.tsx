@@ -45,7 +45,7 @@ const propDefs: ComponentPropDefs[] = [
   {
     name: 'spacing',
     type: 'number',
-    defaultValue: '1',
+    defaultValue: 1,
   },
 ];
 

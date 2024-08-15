@@ -33,7 +33,7 @@ const propDefs: ComponentPropDefs[] = [
     name: 'children',
     type: 'text',
     defaultValue:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt corporis natus veniam quis cupiditate enim architecto mollitia numquam temporibus, consectetur nam laboriosam voluptates nemo facilis? Exercitationem aut praesentium quibusdam reiciendis.',
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt corporis natus veniam quis.',
   },
 ];
 

@@ -101,9 +101,6 @@ export const codeConfig: CodeConfigType = {
   maxWidth: 440,
   code,
   propDefs,
-  title: 'Button',
-  subTitle:
-    'Triggers an action or event in response to user interaction, with customizable styles and behaviors.',
 };
 
 export const sectionCodeConfig: CodeConfigType = {

@@ -107,9 +107,6 @@ export const codeConfig: CodeConfigType = {
   component: Demo,
   code,
   propDefs,
-  title: 'ButtonGroup',
-  subTitle:
-    'Groups multiple buttons together, enabling related actions to be displayed and managed cohesively.',
 };
 
 export const splitButtonCodeConfig: CodeConfigType = {

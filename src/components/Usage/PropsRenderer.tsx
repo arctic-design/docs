@@ -13,7 +13,7 @@ function autoCapitalize(str: string) {
 
 type PropsRendererProps = {
   name: string;
-  type: 'ddl' | 'text' | 'boolean';
+  type: 'ddl' | 'text' | 'boolean' | 'number';
   onChange: (value: string | boolean) => void;
   value: string | boolean;
   values?: string[];
