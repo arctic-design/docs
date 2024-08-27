@@ -34,7 +34,7 @@ const propDefs: ComponentPropDefs[] = [
   },
   {
     name: 'size',
-    type: 'ddl',
+    type: 'segment',
     values: ['small', 'medium', 'large'],
     defaultValue: 'medium',
   },

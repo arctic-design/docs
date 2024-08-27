@@ -20,7 +20,7 @@ export function Header() {
       </section>
       <section className={styles.center}>
         <SnowLink href='/getting-started/overview'>Get Started</SnowLink>
-        <SnowLink href='/foundations/colors'>Foundations</SnowLink>
+        <SnowLink href='/foundations'>Foundations</SnowLink>
         <SnowLink href='/components'>Components</SnowLink>
       </section>
       <section className={styles.right}>

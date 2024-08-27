@@ -1,14 +1,25 @@
 'use client';
 import Link from 'next/link';
 import { useMemo } from 'react';
-import styles from './Breadcrumb.module.scss';
 import { usePathname } from 'next/navigation';
 import { Route } from '@/types';
-import { ChevronRightIcon } from '@heroicons/react/24/outline';
+
+import { Breadcrumbs } from '@arctic-kit/snow';
+
+import { css } from '@pigment-css/react';
 
 interface BreadcrumbProps {
   routes: Route[];
 }
+
+const anchorStyles = css({
+  color: 'var(--snow-colors-grey-900)',
+  textDecoration: 'none',
+  transition: 'color 0.3s',
+  '&:hover': {
+    color: 'var(--snow-colors-primary-main)',
+  },
+});
 
 const findBreadcrumbPath = (
   routes: Route[],
@@ -36,36 +47,31 @@ const findBreadcrumbPath = (
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ routes }) => {
   const currentPath = usePathname(); // Hook to get current path
 
-  const breadcrumbPath = useMemo(() => {
-    const path = findBreadcrumbPath(routes, currentPath);
-    return path
-      ? [{ path: '/', label: 'Home', clickable: true }, ...path]
-      : null;
+  const breadcrumbPaths = useMemo(() => {
+    const paths = findBreadcrumbPath(routes, currentPath);
+    const foundPaths = paths
+      ? [{ path: '/', label: 'Home', clickable: true }, ...paths]
+      : [];
+    return foundPaths.map((item) => ({
+      title: item.label,
+      href: item.path,
+      clickable: item.clickable,
+    }));
   }, [routes, currentPath]);
 
-  if (!breadcrumbPath) {
+  if (!breadcrumbPaths) {
     return null;
   }
 
   return (
-    <nav className={styles.breadcrumb}>
-      {breadcrumbPath.map((route, index) => (
-        <span key={route.path} className={styles.routePath}>
-          {route.path && route.clickable ? (
-            <Link href={route.path} className={styles.breadcrumbLink}>
-              {route.label}
-            </Link>
-          ) : (
-            <span className={styles.breadcrumbLabel}>{route.label}</span>
-          )}
-          {index < breadcrumbPath.length - 1 && (
-            <span className={styles.separator}>
-              <ChevronRightIcon />
-            </span>
-          )}
-        </span>
-      ))}
-    </nav>
+    <Breadcrumbs
+      items={breadcrumbPaths}
+      renderAnchor={(title, href) => (
+        <Link href={href} className={anchorStyles}>
+          {title}
+        </Link>
+      )}
+    />
   );
 };
 

@@ -18,7 +18,7 @@ const propDefs: ComponentPropDefs[] = [
   },
   {
     name: 'type',
-    type: 'ddl',
+    type: 'segment',
     values: ['spinner', 'dots'],
     defaultValue: 'spinner',
   },

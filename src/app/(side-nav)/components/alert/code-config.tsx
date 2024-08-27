@@ -17,7 +17,7 @@ function Demo() {
 const propDefs: ComponentPropDefs[] = [
   {
     name: 'severity',
-    type: 'ddl',
+    type: 'segment',
     values: ['success', 'error', 'warning', 'info'],
     defaultValue: 'info',
   },

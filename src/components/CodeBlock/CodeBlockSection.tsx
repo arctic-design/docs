@@ -21,9 +21,7 @@ export function CodeBlockSection({
     if (onCopy) {
       onCopy(text);
     } else {
-      navigator.clipboard.writeText(text).then(() => {
-        alert('Code copied to clipboard!');
-      });
+      navigator.clipboard.writeText(text);
     }
   };
 

@@ -1,7 +1,8 @@
 .main {
   width: 100vw;
-  height: calc(100vh - var(--header-height));
+  // height: calc(100vh - var(--header-height));
   overflow-y: auto;
+  margin-top: var(--header-height);
 }
 .header {
   display: flex;

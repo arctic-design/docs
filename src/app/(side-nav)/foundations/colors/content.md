@@ -6,4 +6,4 @@ In addition to these colors, the system includes a **neutral** color type define
 
 This structure ensures a consistent and cohesive visual identity throughout the design system while maintaining flexibility in color usage.
 
-## Color palette used
+## Default Color palette

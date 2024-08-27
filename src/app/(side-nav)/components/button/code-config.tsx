@@ -1,10 +1,7 @@
 import { CodeConfigType, ComponentPropDefs } from '@/types';
 import { Box, Button, ButtonProps } from '@arctic-kit/snow';
 import { PropsWithChildren } from 'react';
-import {
-  CloudArrowDownIcon,
-  CloudArrowUpIcon,
-} from '@heroicons/react/24/outline';
+import { CloudArrowDownIcon, CloudArrowUpIcon } from '@arctic-kit/icons';
 
 const code = `
 import { Box, Button } from '@arctic-kit/snow';
@@ -20,15 +17,15 @@ function Demo() {
 `;
 
 const codeWithSections = `
-import { CloudArrowDownIcon, CloudArrowUpIcon } from '@heroicons/react/24/outline';
+import { CloudArrowDownIcon, CloudArrowUpIcon } from '@arctic-kit/icons';
 import { Button } from '@arctic-kit/snow';
 
 function Demo() {
   return (
     <Button
       {{props}}
-      leadingSection={<CloudArrowDownIcon />}
-      trailingSection={<CloudArrowUpIcon />}
+      prefix={<CloudArrowDownIcon />}
+      suffix={<CloudArrowUpIcon />}
     >
       {{children}}
     </Button>
@@ -45,13 +42,13 @@ const propDefs: ComponentPropDefs[] = [
   },
   {
     name: 'variant',
-    type: 'ddl',
+    type: 'segment',
     values: ['filled', 'outlined', 'text'],
     defaultValue: 'filled',
   },
   {
     name: 'size',
-    type: 'ddl',
+    type: 'segment',
     values: ['small', 'medium', 'large'],
     defaultValue: 'medium',
   },
@@ -87,8 +84,8 @@ function DemoWithSections({
   return (
     <Button
       {...props}
-      leadingSection={<CloudArrowDownIcon />}
-      trailingSection={<CloudArrowUpIcon />}
+      prefix={<CloudArrowDownIcon />}
+      suffix={<CloudArrowUpIcon />}
     >
       {children}
     </Button>

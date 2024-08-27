@@ -34,9 +34,15 @@ function Demo() {
 const propDefs: ComponentPropDefs[] = [
   {
     name: 'itemSize',
-    type: 'ddl',
+    type: 'segment',
     values: ['small', 'medium', 'large'],
     defaultValue: 'medium',
+  },
+  {
+    name: 'variant',
+    type: 'segment',
+    values: ['outlined', 'filled', 'text'],
+    defaultValue: 'outlined',
   },
   {
     name: 'color',

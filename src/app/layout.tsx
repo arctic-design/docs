@@ -4,7 +4,7 @@ import './globals.scss';
 import '@pigment-css/react/styles.css';
 import '@arctic-kit/snow/style.css';
 import { Header } from '@/components/Header';
-// import { Footer } from '@/components/Footer';
+import { ScrollToTop } from '@/components/ScrollToTop';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,6 +27,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <Header />
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

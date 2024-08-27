@@ -17,6 +17,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 4px 24px;
+  position: fixed;
+  background: linear-gradient(90deg, #ffffff 0%, #f9fcfe 50%, #f0f9ff 100%);
+  z-index: 1;
 
   .left {
     display: flex;

@@ -24,7 +24,7 @@ function Demo() {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
-    <Box sx={{ marginBottom: 20, width: '100%' }}>
+    <Box sx={{ marginBottom: 20, width: '100%', overflowX: 'auto' }}>
       <Tabs {{props}}>
         <Tab
           label='Drafts'
@@ -81,6 +81,12 @@ function Demo() {
 
 const propDefs: ComponentPropDefs[] = [
   {
+    name: 'color',
+    type: 'ddl',
+    values: ['primary', 'secondary', 'success', 'error', 'warning', 'info'],
+    defaultValue: 'primary',
+  },
+  {
     name: 'fullWidth',
     type: 'boolean',
     defaultValue: false,
@@ -91,7 +97,7 @@ function Demo(props: TabsProps) {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
-    <Box sx={{ marginBottom: 20, width: '100%' }}>
+    <Box sx={{ marginBottom: 20, width: '100%', overflowX: 'auto' }}>
       <Tabs {...props}>
         <Tab
           label='Drafts'

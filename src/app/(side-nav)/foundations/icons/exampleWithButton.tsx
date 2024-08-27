@@ -4,7 +4,7 @@ import {
   CheckCircleIcon,
   ArrowDownLeftIcon,
   CloudArrowUpIcon,
-} from '@heroicons/react/20/solid';
+} from '@arctic-kit/icons';
 
 export default function Example() {
   return (
@@ -15,12 +15,13 @@ export default function Example() {
         alignItems: 'center',
         gap: 16,
         padding: 8,
+        flexWrap: 'wrap',
       }}
     >
-      <Button leadingSection={<ChevronDoubleDownIcon />}>Double Down</Button>
-      <Button leadingSection={<CheckCircleIcon />}>Check Circle</Button>
-      <Button leadingSection={<ArrowDownLeftIcon />}>Arrow Down Left</Button>
-      <Button leadingSection={<CloudArrowUpIcon />}>Cloud Arrow Up</Button>
+      <Button prefix={<ChevronDoubleDownIcon />}>Double Down</Button>
+      <Button prefix={<CheckCircleIcon />}>Check Circle</Button>
+      <Button prefix={<ArrowDownLeftIcon />}>Arrow Down Left</Button>
+      <Button prefix={<CloudArrowUpIcon />}>Cloud Arrow Up</Button>
     </Box>
   );
 }

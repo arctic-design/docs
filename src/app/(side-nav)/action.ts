@@ -8,15 +8,15 @@ export async function fetchRoutes() {
   return { tree, flat };
 }
 
-export async function fetchDirectoryMeta() {
+export async function fetchDirectoryMeta(directory: string) {
   const metaDir = path.join(
     process.cwd(),
     'src',
     'app',
     '(side-nav)',
-    'components',
+    directory,
   );
 
-  const directoryMeta = await getDirectoryMeta(metaDir);
+  const directoryMeta = await getDirectoryMeta(metaDir, directory);
   return directoryMeta;
 }

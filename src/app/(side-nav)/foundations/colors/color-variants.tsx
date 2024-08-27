@@ -1,18 +1,19 @@
 'use client';
 import React from 'react';
-import { DEFAULT_THEME, SnowColorType, Box, Tooltip } from '@arctic-kit/snow';
+import {
+  DEFAULT_THEME,
+  SnowColorType,
+  Box,
+  Tooltip,
+  getContrastText,
+} from '@arctic-kit/snow';
 import { styled } from '@pigment-css/react';
 
-const ColorName = styled.span<{ color: string }>({
-  color: 'black',
-});
-
-const ColorCode = styled.span<{ color: string }>({
+const ColorCode = styled.span({
   fontWeight: 'inherit',
   fontSize: '0.75rem',
   lineHeight: 1.66,
   letterSpacing: '0.03333em',
-  color: 'inherit',
   '&:hover': {
     cursor: 'pointer',
   },
@@ -36,15 +37,25 @@ const ColorPalette = (props: { color: SnowColorType; name: string }) => {
       });
   };
 
+  const mainTextColor = getContrastText(color.main);
+
   return (
     <>
       <Box as='li' sx={{ backgroundColor: color.main, color: '#fff' }}>
         <Box sx={{ marginBottom: 60 }}>{name}</Box>
         <div className='color-swatch'>
-          <ColorName color={color.main}>main</ColorName>
+          <Box
+            sx={{
+              color: mainTextColor,
+            }}
+          >
+            main
+          </Box>
           <ColorCode
-            color={color.main}
             onClick={() => handleCopyToClipboard(color.main)}
+            sx={{
+              color: mainTextColor,
+            }}
           >
             {color.main}
           </ColorCode>
@@ -52,30 +63,43 @@ const ColorPalette = (props: { color: SnowColorType; name: string }) => {
       </Box>
       {Object.keys(color)
         .filter((key) => key !== 'main')
-        .map((colorKey) => (
-          <Box
-            key={colorKey}
-            as='li'
-            sx={{
-              backgroundColor: (color as any)[colorKey],
-              color: '#fff',
-            }}
-          >
-            <div className='color-swatch'>
-              <ColorName color={(color as any)[colorKey]}>{colorKey}</ColorName>
-              <Tooltip message='Copy color'>
-                <ColorCode
-                  color={(color as any)[colorKey]}
-                  onClick={() =>
-                    handleCopyToClipboard((color as any)[colorKey])
-                  }
+        .map((colorKey) => {
+          const variantTextColor = getContrastText((color as any)[colorKey]);
+
+          return (
+            <Box
+              key={colorKey}
+              as='li'
+              sx={{
+                backgroundColor: (color as any)[colorKey],
+                color: '#fff',
+              }}
+            >
+              <div className='color-swatch'>
+                <Box
+                  sx={{
+                    color: variantTextColor,
+                  }}
                 >
-                  {(color as any)[colorKey]}
-                </ColorCode>
-              </Tooltip>
-            </div>
-          </Box>
-        ))}
+                  {colorKey}
+                </Box>
+                <Tooltip message='Copy color'>
+                  <ColorCode
+                    color={(color as any)[colorKey]}
+                    onClick={() =>
+                      handleCopyToClipboard((color as any)[colorKey])
+                    }
+                    sx={{
+                      color: variantTextColor,
+                    }}
+                  >
+                    {(color as any)[colorKey]}
+                  </ColorCode>
+                </Tooltip>
+              </div>
+            </Box>
+          );
+        })}
     </>
   );
 };

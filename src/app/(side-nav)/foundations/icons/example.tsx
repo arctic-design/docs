@@ -4,7 +4,7 @@ import {
   CheckCircleIcon,
   ArrowDownLeftIcon,
   CloudArrowUpIcon,
-} from '@heroicons/react/20/solid';
+} from '@arctic-kit/icons';
 
 export default function Example() {
   return (
@@ -15,6 +15,7 @@ export default function Example() {
         alignItems: 'center',
         gap: 16,
         padding: 8,
+        flexWrap: 'wrap',
       }}
     >
       <IconButton>

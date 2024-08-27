@@ -25,7 +25,7 @@ const propDefs: ComponentPropDefs[] = [
   },
   {
     name: 'variant',
-    type: 'ddl',
+    type: 'segment',
     values: ['elevation', 'outlined'],
     defaultValue: 'elevation',
   },
