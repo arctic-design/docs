@@ -31,6 +31,12 @@ const propDefs: ComponentPropDefs[] = [
     defaultValue: 'Enter your description here',
   },
   {
+    name: 'size',
+    type: 'segment',
+    values: ['small', 'medium', 'large'],
+    defaultValue: 'medium',
+  },
+  {
     name: 'disabled',
     type: 'boolean',
     defaultValue: false,

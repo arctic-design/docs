@@ -11,7 +11,7 @@ export default function Index() {
         propDefs={codeConfig.propDefs}
       />
       <Usage
-        title='It can be combined with other components to create a SplitButton'
+        title='It can be combined with ActionMenu to create a SplitButton'
         code={splitButtonCodeConfig.code}
         component={splitButtonCodeConfig.component}
         propDefs={splitButtonCodeConfig.propDefs}

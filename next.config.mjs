@@ -1,7 +1,9 @@
 import createMDX from '@next/mdx';
 import { withPigment, extendTheme } from '@pigment-css/nextjs-plugin';
-import { DEFAULT_THEME } from '@arctic-kit/snow';
+import { createDefaultTheme } from '@arctic-kit/snow';
 import path from 'path';
+
+const defaultTheme = createDefaultTheme();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -42,7 +44,7 @@ const nextConfigWithMdx = withMDX(nextConfig);
 
 export default withPigment(nextConfigWithMdx, {
   theme: extendTheme({
-    ...DEFAULT_THEME,
+    ...defaultTheme,
     cssVarPrefix: 'snow',
   }),
 });

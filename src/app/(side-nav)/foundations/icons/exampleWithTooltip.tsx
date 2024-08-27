@@ -4,7 +4,7 @@ import {
   CheckCircleIcon,
   ArrowDownLeftIcon,
   CloudArrowUpIcon,
-} from '@heroicons/react/20/solid';
+} from '@arctic-kit/icons';
 import { styled } from '@pigment-css/react';
 
 const Container = styled.div({
@@ -16,6 +16,7 @@ const Container = styled.div({
   '& svg': {
     width: '24px',
   },
+  flexWrap: 'wrap',
 });
 
 export default function Example() {

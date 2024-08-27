@@ -1,4 +1,12 @@
-import { OptionType, Select, Switch, TextInput } from '@arctic-kit/snow';
+import { ComponentPropType } from '@/types';
+import {
+  OptionType,
+  SegmentedControl,
+  SegmentedControlButton,
+  Select,
+  Switch,
+  TextInput,
+} from '@arctic-kit/snow';
 import { useMemo } from 'react';
 function autoCapitalize(str: string) {
   if (!str) {
@@ -13,7 +21,7 @@ function autoCapitalize(str: string) {
 
 type PropsRendererProps = {
   name: string;
-  type: 'ddl' | 'text' | 'boolean' | 'number';
+  type: ComponentPropType;
   onChange: (value: string | boolean) => void;
   value: string | boolean;
   values?: string[];
@@ -62,6 +70,21 @@ export function PropsRenderer({
         value={value as string}
         onChange={(event) => onChange(event.target.value)}
       />
+    );
+  }
+
+  if (type === 'segment') {
+    return (
+      <SegmentedControl
+        initialSelectedIndex={values?.findIndex((item) => item === value) ?? -1}
+        label={label}
+      >
+        {values?.map((item) => (
+          <SegmentedControlButton key={item} onClick={() => onChange(item)}>
+            {autoCapitalize(item)}
+          </SegmentedControlButton>
+        ))}
+      </SegmentedControl>
     );
   }
 

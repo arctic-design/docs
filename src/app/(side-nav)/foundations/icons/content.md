@@ -1,3 +1,3 @@
 # Icons
 
-In the Arctic Design Kit, we utilize [Heroicons](https://heroicons.com) for all of our icon needs. We specifically use the SVG variant of the icons, ensuring a consistent, high-quality visual appearance across the design system. These icons integrate seamlessly within our component library and provide a modern and versatile look for the user interface.
+In the Arctic Design Kit, we utilize `@arctic-kit/icons` for all of our icon needs. The `@arctic-kit/icons` package offers a collection of SVG icons designed to enhance user interfaces and improve visual communication. Each icon is optimized for modern web applications and seamlessly integrates with React components. These icons come with a default `className` of `"arctic-icon-medium"`, making it easy to apply common styles like width, height, and more through global CSS rules. For the icons shown below, we’ve applied a global width of 24px.

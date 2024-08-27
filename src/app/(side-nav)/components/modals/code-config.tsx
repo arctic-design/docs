@@ -61,7 +61,7 @@ const propDefs: ComponentPropDefs[] = [
   { name: 'actionLabel', type: 'text', defaultValue: 'Save' },
   {
     name: 'actionSize',
-    type: 'ddl',
+    type: 'segment',
     values: ['small', 'medium', 'large'],
     defaultValue: 'medium',
   },

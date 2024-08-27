@@ -48,7 +48,6 @@ const propDefs: ComponentPropDefs[] = [
     name: 'color',
     type: 'ddl',
     values: ['primary', 'secondary', 'success', 'error', 'warning', 'info'],
-    defaultValue: 'primary',
   },
   {
     name: 'variant',

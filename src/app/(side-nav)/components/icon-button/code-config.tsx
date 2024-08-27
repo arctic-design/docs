@@ -24,12 +24,17 @@ const propDefs: ComponentPropDefs[] = [
   },
   {
     name: 'size',
-    type: 'ddl',
+    type: 'segment',
     values: ['small', 'medium', 'large'],
     defaultValue: 'medium',
   },
   {
     name: 'rounded',
+    type: 'boolean',
+    defaultValue: false,
+  },
+  {
+    name: 'noBorder',
     type: 'boolean',
     defaultValue: false,
   },

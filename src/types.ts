@@ -13,9 +13,16 @@ export interface RouteMetadata extends FlatRoute {
   children?: RouteMetadata[];
 }
 
+export type ComponentPropType =
+  | 'ddl'
+  | 'text'
+  | 'number'
+  | 'boolean'
+  | 'segment';
+
 export interface ComponentPropDefs {
   name: string;
-  type: 'ddl' | 'text' | 'number' | 'boolean';
+  type: ComponentPropType;
   values?: string[];
   defaultValue?: string | number | boolean;
 }

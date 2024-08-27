@@ -28,9 +28,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
   };
 
   const handleCopy = (text: any) => {
-    navigator.clipboard.writeText(text).then(() => {
-      alert('Code copied to clipboard!');
-    });
+    navigator.clipboard.writeText(text);
   };
 
   return (
