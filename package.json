@@ -12,9 +12,9 @@
     "serve": "serve -l 5005 -s out"
   },
   "dependencies": {
-    "@arctic-kit/colors": "^0.15.2",
-    "@arctic-kit/icons": "^0.15.2",
-    "@arctic-kit/snow": "^0.15.2",
+    "@arctic-kit/colors": "^0.16.0",
+    "@arctic-kit/icons": "^0.16.0",
+    "@arctic-kit/snow": "^0.16.0",
     "@floating-ui/react": "^0.26.23",
     "@heroicons/react": "^2.1.5",
     "@mdx-js/loader": "^3.0.1",
