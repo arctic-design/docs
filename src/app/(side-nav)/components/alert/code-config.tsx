@@ -30,6 +30,11 @@ const propDefs: ComponentPropDefs[] = [
     type: 'boolean',
   },
   {
+    name: 'title',
+    type: 'text',
+    defaultValue: 'Arctic Design Kit',
+  },
+  {
     name: 'children',
     type: 'text',
     defaultValue:

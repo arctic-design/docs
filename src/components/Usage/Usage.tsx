@@ -22,24 +22,28 @@ export function Usage({
   component: Component,
   propDefs,
   title = 'Usage',
+  separator = '=',
 }: PropsWithChildren<{
   component: any;
   code: string;
   propDefs: ComponentPropDefs[];
+  separator?: '=' | ':';
   title?: string;
 }>) {
   const [componentProps, setComponentProps] = useState<any>({
     ...parseStateProps(propDefs),
   });
 
+  const joinString = separator === ':' ? ', \n\t  ' : ' ';
+
   const propsString = Object.entries(componentProps)
     .map(([key, value]) => {
       if (key === 'children') {
         return '';
       } else if (typeof value === 'string') {
-        return `${key}="${value}"`;
+        return `${key}${separator}"${value}"`;
       } else if (typeof value === 'boolean') {
-        return value ? key : ''; // Only include boolean props if they are true
+        return value ? (separator === ':' ? `${key}:true` : key) : ''; // Only include boolean props if they are true
       } else if (typeof value === 'number') {
         return `${key}={${value}}`;
       } else {
@@ -48,7 +52,7 @@ export function Usage({
     })
     .filter(Boolean) // Remove any empty strings (e.g., for false boolean values)
 
-    .join(' ');
+    .join(joinString);
 
   const updatedCode = code
     .replace('{{props}}', propsString)
