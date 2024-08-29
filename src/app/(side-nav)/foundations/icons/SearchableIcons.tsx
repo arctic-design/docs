@@ -1,5 +1,5 @@
 'use client';
-import { MagnifyingGlassIcon } from '@arctic-kit/icons';
+import { MagnifyingGlassIcon, XMarkIcon } from '@arctic-kit/icons';
 import { TextInput } from '@arctic-kit/snow';
 import styles from './listIcons.module.scss';
 import { useState, useEffect } from 'react';
@@ -32,6 +32,13 @@ export function SearchableIcons({ render }: SearchIconsProps) {
           size='large'
           value={value}
           onChange={(event) => setValue(event.target.value)}
+          suffix={value && <XMarkIcon strokeWidth={2} />}
+          suffixProps={{
+            onClick: () => setValue(''),
+            style: {
+              pointerEvents: 'auto',
+            },
+          }}
         />
       </div>
       {render(debouncedValue)}

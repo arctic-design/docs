@@ -4,7 +4,13 @@ import { IconButton } from '@arctic-kit/snow';
 import styles from './listIcons.module.scss';
 import { useState } from 'react';
 
-export function CopyIconButton({ name }: { name: string }) {
+export function CopyIconButton({
+  name,
+  variant,
+}: {
+  name: string;
+  variant?: string;
+}) {
   const [copied, setCopied] = useState(false);
   const onCopyHandler = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -14,7 +20,9 @@ export function CopyIconButton({ name }: { name: string }) {
   return (
     <IconButton
       onClick={() =>
-        onCopyHandler(`import { ${name} } from '@arctic-kit/icons';`)
+        onCopyHandler(
+          `import { ${name} } from '@arctic-kit/icons${variant !== 'outline' ? `/${variant}` : ''}';`,
+        )
       }
       size='small'
       className={styles.copyButton}
