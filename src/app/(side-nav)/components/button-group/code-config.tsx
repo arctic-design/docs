@@ -89,7 +89,7 @@ function SplitButton(props: ButtonGroupProps) {
   return (
     <ButtonGroup {...props}>
       <Button onClick={() => console.log('button')}>Button</Button>
-      <ActionMenu placement='bottom-end' disabled={props?.disabled}>
+      <ActionMenu placement='bottom-end'>
         <ActionMenuItem label='Undo' onClick={() => console.log('Undo')} />
         <ActionMenuItem
           label='Redo'
