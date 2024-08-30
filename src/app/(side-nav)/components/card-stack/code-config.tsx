@@ -46,7 +46,7 @@ function AccordionChild({
     <Accordion>
       <AccordionItem
         title='Title 1'
-        subTitle='Sub-title1 text can be put here'
+        subTitle='Sub-title1'
         active={indexes[0] === activeIndex}
         onToggle={() => onClick && onClick(indexes[0])}
         defaultExpanded={indexes[0] === activeIndex}
@@ -72,7 +72,7 @@ function AccordionChild({
       </AccordionItem>
       <AccordionItem
         title='Title 2'
-        subTitle='Sub-title2 text can be put here'
+        subTitle='Sub-title2'
         titleFooter='Footer text2'
         active={indexes[1] === activeIndex}
         onToggle={() => onClick && onClick(indexes[1])}
@@ -88,7 +88,7 @@ function AccordionChild({
       </AccordionItem>
       <AccordionItem
         title='Title 3'
-        subTitle='Sub-title3 text can be put here'
+        subTitle='Sub-title3'
         titleFooter='Footer text3'
         active={indexes[2] === activeIndex}
         onToggle={() => onClick && onClick(indexes[2])}
@@ -115,7 +115,7 @@ const propDefs: ComponentPropDefs[] = [
   {
     name: 'title',
     type: 'text',
-    defaultValue: 'Group Header Title',
+    defaultValue: 'Group Header',
   },
 
   {
@@ -156,7 +156,7 @@ function AccordionChild({
     <Accordion>
       <AccordionItem
         title='Title 1'
-        subTitle='Sub-title1 text can be put here'
+        subTitle='Sub-title1'
         active={indexes[0] === activeIndex}
         onToggle={() => onClick && onClick(indexes[0])}
         defaultExpanded={indexes[0] === activeIndex}
@@ -182,7 +182,7 @@ function AccordionChild({
       </AccordionItem>
       <AccordionItem
         title='Title 2'
-        subTitle='Sub-title2 text can be put here'
+        subTitle='Sub-title2'
         titleFooter='Footer text2'
         active={indexes[1] === activeIndex}
         onToggle={() => onClick && onClick(indexes[1])}
@@ -198,7 +198,7 @@ function AccordionChild({
       </AccordionItem>
       <AccordionItem
         title='Title 3'
-        subTitle='Sub-title3 text can be put here'
+        subTitle='Sub-title3'
         titleFooter='Footer text3'
         active={indexes[2] === activeIndex}
         onToggle={() => onClick && onClick(indexes[2])}

@@ -10,7 +10,7 @@ import {
   PopoverOptions,
   PopoverTrigger,
 } from '@arctic-kit/snow';
-import { EllipsisHorizontalIcon } from '@heroicons/react/20/solid';
+import { EllipsisHorizontalIcon } from '@arctic-kit/icons/solid';
 import { useState } from 'react';
 
 const defaultCode = `
@@ -56,7 +56,7 @@ import {
   PopoverOptions,
   PopoverTrigger,
 } from '@arctic-kit/snow';
- import { EllipsisHorizontalIcon } from '@heroicons/react/20/solid';
+ import { EllipsisHorizontalIcon } from '@arctic-kit/icons/solid';
 
 function Demo() {
   const [open, setOpen] = useState(false);

@@ -71,6 +71,9 @@ export function ArcticIcons() {
                 label='Color'
                 size='large'
               >
+                <SegmentedControlButton onClick={() => setColor(undefined)}>
+                  None
+                </SegmentedControlButton>
                 <SegmentedControlButton onClick={() => setColor('primary')}>
                   Primary
                 </SegmentedControlButton>

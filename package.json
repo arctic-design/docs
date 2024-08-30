@@ -16,7 +16,6 @@
     "@arctic-kit/icons": "^0.17.2",
     "@arctic-kit/snow": "^0.17.2",
     "@floating-ui/react": "^0.26.23",
-    "@heroicons/react": "^2.1.5",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.5",

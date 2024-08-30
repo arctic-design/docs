@@ -59,7 +59,7 @@ Arctic Design is built with a modular architecture, allowing developers to take 
 
 - **Customizability**: The modular structure allows developers to extend and customize components to meet specific project requirements, providing flexibility in design and implementation.
 
-## Snow: Core Components
+## [Snow](/components): Core Components
 
 Arctic Design's core components are encapsulated in the **Snow** library, known as **@arctic-kit/snow**, a powerful and versatile React component library. Snow provides a collection of essential UI components that are designed to streamline development and ensure consistency across applications. These components are meticulously crafted to integrate seamlessly with your projects, offering both flexibility and ease of use.
 

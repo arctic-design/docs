@@ -74,6 +74,7 @@ export default function Home() {
               <Feature
                 title='Snow'
                 description={`Arctic Design's Snow library, or @arctic-kit/snow, is a versatile React component library offering essential UI components for streamlined development and consistent application design. These components are meticulously crafted for seamless integration, providing both flexibility and ease of use.`}
+                href='/components'
               />
             </GridColumn>
             <GridColumn xs={12} lg={4}>

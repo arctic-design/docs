@@ -1,4 +1,4 @@
-import { ClipboardDocumentIcon } from '@heroicons/react/24/outline';
+import { ClipboardDocumentIcon } from '@arctic-kit/icons';
 
 import styles from './ActionButton.module.scss';
 

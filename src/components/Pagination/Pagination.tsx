@@ -3,7 +3,7 @@
 import styles from './Pagination.module.scss';
 import { FlatRoute } from '@/types';
 import { usePathname } from 'next/navigation';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
+import { ChevronLeftIcon, ChevronRightIcon } from '@arctic-kit/icons/solid';
 import { SnowLink } from '@/components/SnowLink';
 import { useMemo } from 'react';
 
@@ -35,7 +35,7 @@ export const Pagination: React.FC<PaginationProps> = ({ routes }) => {
     <div className={styles.paginationFooter}>
       {prevRoute ? (
         <SnowLink href={prevRoute.path}>
-          <ChevronLeftIcon /> {prevRoute.label}
+          <ChevronLeftIcon className={styles.icon} /> {prevRoute.label}
         </SnowLink>
       ) : (
         <span className={styles.hidden}></span>
@@ -43,7 +43,7 @@ export const Pagination: React.FC<PaginationProps> = ({ routes }) => {
       {nextRoute && (
         <SnowLink href={nextRoute.path}>
           {nextRoute.label}
-          <ChevronRightIcon />
+          <ChevronRightIcon className={styles.icon} />
         </SnowLink>
       )}
     </div>
