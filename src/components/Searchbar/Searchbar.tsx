@@ -2,11 +2,21 @@
 import { MagnifyingGlassIcon } from '@arctic-kit/icons';
 import { IconButton, TextInput, Modal, Box } from '@arctic-kit/snow';
 import styles from './Searchbar.module.scss';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Index as LunrIndex } from 'lunr';
 import { SearchableDocument } from '@/types';
 import { List } from './List';
 import { RemoveScroll } from 'react-remove-scroll';
+
+const debounce = (func: (...args: any[]) => void, timeout = 300) => {
+  let timer: NodeJS.Timeout;
+  return (...args: any[]) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func(...args);
+    }, timeout);
+  };
+};
 
 type SearchbarProps = {
   docs: SearchableDocument[];
@@ -25,16 +35,6 @@ export function Searchbar({ searchIndex, docs }: SearchbarProps) {
     }
   }, [searchIndex]);
 
-  const debounce = (func: (...args: any[]) => void, timeout = 300) => {
-    let timer: NodeJS.Timeout;
-    return (...args: any[]) => {
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        func(...args);
-      }, timeout);
-    };
-  };
-
   useEffect(() => {
     if (!open) {
       setResults(docs);
@@ -49,31 +49,38 @@ export function Searchbar({ searchIndex, docs }: SearchbarProps) {
       setOpen((prevState) => !prevState);
     };
 
-    searchInputRef.current?.addEventListener('click', handleSearchInputClick);
+    const _searchInputRef = searchInputRef.current;
+
+    _searchInputRef?.addEventListener('click', handleSearchInputClick);
 
     return () => {
-      searchInputRef.current?.removeEventListener(
-        'click',
-        handleSearchInputClick,
-      );
+      _searchInputRef?.removeEventListener('click', handleSearchInputClick);
     };
   }, []);
 
+  const debouncedSearch = useMemo(
+    () =>
+      debounce((query: string) => {
+        if (query) {
+          const searchResults = lunrIndexRef.current!.search(query);
+          setResults(
+            searchResults.map(
+              ({ ref }) =>
+                docs.find((doc) => doc.id === ref) as SearchableDocument,
+            ),
+          );
+        } else {
+          setResults(docs);
+        }
+      }, 300),
+    [docs, lunrIndexRef, setResults],
+  );
+
   const handleSearch = useCallback(
-    debounce((query: string) => {
-      if (query) {
-        const searchResults = lunrIndexRef.current!.search(query);
-        setResults(
-          searchResults.map(
-            ({ ref }) =>
-              docs.find((doc) => doc.id === ref) as SearchableDocument,
-          ),
-        );
-      } else {
-        setResults(docs);
-      }
-    }, 300),
-    [],
+    (query: string) => {
+      debouncedSearch(query);
+    },
+    [debouncedSearch],
   );
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
