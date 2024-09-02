@@ -40,3 +40,18 @@ export type MetaType = {
   subTitle: string;
   slug: string;
 };
+
+export interface Document {
+  id: string;
+  title: string;
+  content: string;
+  parent?: string;
+}
+
+export type SearchableDocument = {
+  id: string;
+  slug: string;
+  content: string;
+  parentTitle: string;
+  parentSlug: string;
+};

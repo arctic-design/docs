@@ -51,19 +51,19 @@ const propDefs: ComponentPropDefs[] = [
   },
   {
     name: 'variant',
-    type: 'ddl',
+    type: 'segment',
     values: ['filled', 'outlined', 'text'],
     defaultValue: 'outlined',
   },
   {
     name: 'size',
-    type: 'ddl',
+    type: 'segment',
     values: ['small', 'medium', 'large'],
     defaultValue: 'medium',
   },
   {
     name: 'orientation',
-    type: 'ddl',
+    type: 'segment',
     values: ['horizontal', 'vertical'],
     defaultValue: 'horizontal',
   },

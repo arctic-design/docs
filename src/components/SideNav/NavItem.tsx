@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
+import { ChevronRightIcon, ChevronDownIcon } from '@arctic-kit/icons/solid';
 import styles from './SideNav.module.scss';
 import { Route } from '@/types';
 

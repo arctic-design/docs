@@ -1,9 +1,9 @@
 import { CodeConfigType, ComponentPropDefs } from '@/types';
 import { IconButton, IconButtonProps } from '@arctic-kit/snow';
-import { FaceSmileIcon } from '@heroicons/react/20/solid';
+import { FaceSmileIcon } from '@arctic-kit/icons/solid';
 
 const code = `
-import { FaceSmileIcon } from '@heroicons/react/20/solid';
+import { FaceSmileIcon } from '@arctic-kit/icons/solid';
 import { IconButton } from '@arctic-kit/snow';
 
 function Demo() {

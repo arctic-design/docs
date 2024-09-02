@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Language } from 'prism-react-renderer';
 import styles from './CodeBlock.module.scss';
-import { ChevronRightIcon } from '@heroicons/react/24/outline';
+import { ChevronRightIcon } from '@arctic-kit/icons';
 import { ActionButton } from './ActionButton';
 import { CodeBlockSection } from './CodeBlockSection';
 

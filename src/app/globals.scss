@@ -16,8 +16,13 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   background: linear-gradient(90deg, #ffffff 0%, #f9fcfe 50%, #f0f9ff 100%);
+  -webkit-overflow-scrolling: touch;
 }
 
 .arctic-icon-medium {
   width: 24px;
+}
+
+#searchbar-modal-content-overlay {
+  background: #0008;
 }
