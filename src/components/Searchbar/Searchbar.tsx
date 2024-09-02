@@ -3,10 +3,10 @@ import { MagnifyingGlassIcon } from '@arctic-kit/icons';
 import { IconButton, TextInput, Modal, Box } from '@arctic-kit/snow';
 import styles from './Searchbar.module.scss';
 import { useCallback, useEffect, useRef, useState } from 'react';
-
 import { Index as LunrIndex } from 'lunr';
 import { SearchableDocument } from '@/types';
 import { List } from './List';
+import { RemoveScroll } from 'react-remove-scroll';
 
 type SearchbarProps = {
   docs: SearchableDocument[];
@@ -114,6 +114,7 @@ export function Searchbar({ searchIndex, docs }: SearchbarProps) {
         readOnly
         ref={searchInputRef}
         containerClassName={styles.searchBarInputDesktop}
+        id='search-docs-input-dummy'
       />
       <IconButton
         className={styles.searchBarInputMobile}
@@ -127,6 +128,7 @@ export function Searchbar({ searchIndex, docs }: SearchbarProps) {
         open={open}
         onOpenChange={setOpen}
         size='medium'
+        id='searchbar-modal'
       >
         <Box
           sx={{
@@ -146,10 +148,10 @@ export function Searchbar({ searchIndex, docs }: SearchbarProps) {
               borderBottom: '0.5px solid var(--snow-colors-grey-300)',
             }}
           >
-            <input
-              //   as='input'
+            <Box
+              as='input'
               type='text'
-              style={{
+              sx={{
                 height: 28,
                 fontSize: 16,
                 color: 'var(--snow-colors-grey-700)',
@@ -162,6 +164,7 @@ export function Searchbar({ searchIndex, docs }: SearchbarProps) {
               placeholder='Search the docs'
               value={query}
               onChange={handleInputChange}
+              id='search-input'
             />
             <IconButton
               style={{ width: 'auto', padding: '2px 4px' }}
@@ -171,7 +174,13 @@ export function Searchbar({ searchIndex, docs }: SearchbarProps) {
             </IconButton>
           </Box>
 
-          <List items={results} query={query} onToggle={() => setOpen(!open)} />
+          <RemoveScroll>
+            <List
+              items={results}
+              query={query}
+              onToggle={() => setOpen(!open)}
+            />
+          </RemoveScroll>
         </Box>
       </Modal>
     </>
