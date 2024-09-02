@@ -114,6 +114,7 @@ export function Searchbar({ searchIndex, docs }: SearchbarProps) {
         readOnly
         ref={searchInputRef}
         containerClassName={styles.searchBarInputDesktop}
+        className={styles.searchBarInputField}
         id='search-docs-input-dummy'
       />
       <IconButton
