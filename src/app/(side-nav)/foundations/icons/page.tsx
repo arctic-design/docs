@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import styles from '@/styles/markdown.module.scss';
-import Content from './content.md';
+import Content from './content.mdx';
 
 import Example from './example';
 import ExampleSrc from './example.tsx?raw';
