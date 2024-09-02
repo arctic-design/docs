@@ -39,6 +39,10 @@
     gap: 8px;
   }
   .right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
     svg {
       color: #000;
     }

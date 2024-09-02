@@ -1,0 +1,27 @@
+.shortcut {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1px;
+  font-size: 9px;
+}
+
+.searchBarInputDesktop {
+  @media (max-width: 480px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 481px) {
+    display: block;
+  }
+}
+
+.searchBarInputMobile {
+  @media (max-width: 480px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 481px) {
+    display: none;
+  }
+}

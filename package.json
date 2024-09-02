@@ -23,7 +23,10 @@
     "@types/mdx": "^2.0.13",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
+    "isomorphic-dompurify": "^2.15.0",
     "lottie-web": "^5.12.2",
+    "lunr": "^2.3.9",
+    "marked": "^14.1.0",
     "next": "14.2.5",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.3.1",
@@ -33,6 +36,7 @@
   "devDependencies": {
     "@pigment-css/nextjs-plugin": "^0.0.20",
     "@svgr/webpack": "^8.1.0",
+    "@types/lunr": "^2",
     "@types/node": "^22.2.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

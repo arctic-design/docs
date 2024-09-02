@@ -1,12 +1,17 @@
 import styles from './Header.module.scss';
-import Link from 'next/link';
 import GithubLogo from '@/assets/icons/github.svg';
 import { SnowLink } from '@/components/SnowLink';
 import { Logo } from './Logo';
 import { Suspense } from 'react';
 import { LogoSkeleton } from './LogoSkeleton';
+import { Searchbar } from '../Searchbar';
+import { SearchableDocument } from '@/types';
 
-export function Header() {
+type HeaderProps = {
+  docs: SearchableDocument[];
+  searchIndex: string;
+};
+export async function Header({ docs, searchIndex }: HeaderProps) {
   return (
     <header className={styles.container}>
       <section className={styles.left}>
@@ -24,12 +29,13 @@ export function Header() {
         <SnowLink href='/components'>Components</SnowLink>
       </section>
       <section className={styles.right}>
-        <Link
+        <Searchbar docs={docs} searchIndex={searchIndex} />
+        <SnowLink
           href='https://github.com/arctic-design/arctic-kit'
           target='_blank'
         >
           <GithubLogo />
-        </Link>
+        </SnowLink>
       </section>
     </header>
   );
