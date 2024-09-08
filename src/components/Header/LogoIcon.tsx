@@ -16,3 +16,5 @@ export const LogoIcon = forwardRef<
     </svg>
   );
 });
+
+LogoIcon.displayName = 'LogoIcon';
