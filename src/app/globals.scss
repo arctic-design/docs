@@ -2,6 +2,13 @@
   --header-height: 3rem;
   --header-padding-left: 54px;
   --side-nav-width: 220px;
+  /* Default background for light theme (this can be overridden in theme-light) */
+  --background-gradient: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #f9fcfe 50%,
+    #f0f9ff 100%
+  );
 }
 
 * {
@@ -15,8 +22,25 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  background: linear-gradient(90deg, #ffffff 0%, #f9fcfe 50%, #f0f9ff 100%);
+  background: var(--background-gradient);
+
+  color: var(--snow-colors-neutral-1000);
   -webkit-overflow-scrolling: touch;
+}
+
+/* Light Theme */
+.theme-light {
+  --background-gradient: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #f9fcfe 50%,
+    #f0f9ff 100%
+  );
+}
+
+/* Dark Theme */
+.theme-dark {
+  --background-gradient: var(--snow-colors-neutral-0);
 }
 
 .arctic-icon-medium {
@@ -25,4 +49,13 @@ body {
 
 #searchbar-modal-content-overlay {
   background: #0008;
+}
+
+#snow-effect {
+  display: block; /* or whatever the default state is */
+}
+
+/* When dark theme is active */
+.theme-dark #snow-effect {
+  display: none;
 }

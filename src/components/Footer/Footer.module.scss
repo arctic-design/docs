@@ -1,9 +1,8 @@
 .footer {
   text-align: center;
   padding: 20px;
-  //   background-color: #282c34;
-  background-color: #1c215f;
-  color: white;
+  background-color: var(--snow-colors-primary-900);
+  color: var(--snow-colors-white);
   //   position: fixed;
   width: 100%;
   //   bottom: 0;
@@ -15,14 +14,14 @@
   gap: 6px;
 
   .builtBy {
-    color: white;
+    color: var(--snow-colors-white);
     display: flex;
     justify-content: center;
     align-items: center;
     // gap: 4px;
     font-size: 12px;
     a {
-      color: white;
+      color: var(--snow-colors-white);
       font-size: 12px;
 
       padding-left: 4px;

@@ -41,7 +41,13 @@ const ColorPalette = (props: { color: SnowColorType; name: string }) => {
 
   return (
     <>
-      <Box as='li' sx={{ backgroundColor: color.main, color: '#fff' }}>
+      <Box
+        as='li'
+        sx={{
+          backgroundColor: color.main,
+          color: 'var(--snow-colors-neutral-0)',
+        }}
+      >
         <Box sx={{ marginBottom: 60 }}>{name}</Box>
         <div className='color-swatch'>
           <Box
@@ -72,7 +78,7 @@ const ColorPalette = (props: { color: SnowColorType; name: string }) => {
               as='li'
               sx={{
                 backgroundColor: (color as any)[colorKey],
-                color: '#fff',
+                color: 'var(--snow-colors-neutral-0)',
               }}
             >
               <div className='color-swatch'>

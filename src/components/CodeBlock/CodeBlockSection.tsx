@@ -30,7 +30,7 @@ export function CodeBlockSection({
       <Highlight
         code={children.trim()}
         language={language}
-        theme={themes.oneLight}
+        theme={themes.oneDark}
       >
         {({ tokens, getLineProps, getTokenProps }) => (
           <pre className={styles.container}>

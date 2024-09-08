@@ -17,7 +17,7 @@
     display: block;
     height: 1.5px;
     width: 22px;
-    background-color: black;
+    background-color: var(--snow-colors-grey-900);
     transition: transform 0.15s ease;
   }
   &::before {

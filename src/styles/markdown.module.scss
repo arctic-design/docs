@@ -10,8 +10,6 @@
   h4,
   h5,
   h6 {
-    // color: #004080;
-    // color: var(--snow-colors-primary-900);
     color: var(--snow-colors-neutral-1000);
     margin-bottom: 20px;
     border-bottom: 0.5px solid #e6e6e6;
@@ -20,13 +18,11 @@
 
   h1 {
     font-size: 2.5rem;
-    // border-color: #007acc;
     border-color: var(--snow-colors-grey-700);
   }
 
   h2 {
     font-size: 2rem;
-    // border-color: #00509e;
     border-color: var(--snow-colors-grey-500);
   }
 
@@ -45,20 +41,20 @@
   }
 
   a {
-    color: #00509e;
+    color: var(--snow-colors-primary-main);
     text-decoration: none;
     border-bottom: 1px solid transparent;
 
     &:hover {
-      border-bottom-color: var(--snow-colors-primary-main);
+      border-bottom-color: var(--snow-colors-primary-700);
     }
   }
 
   code {
-    background-color: var(--snow-colors-primary-50);
+    background-color: var(--snow-colors-grey-200);
     padding: 2px 5px;
     border-radius: 3px;
-    color: var(--snow-colors-primary-900);
+    color: var(--snow-colors-grey-900);
   }
 
   hr {

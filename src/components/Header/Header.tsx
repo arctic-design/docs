@@ -6,6 +6,7 @@ import { Suspense } from 'react';
 import { LogoSkeleton } from './LogoSkeleton';
 import { Searchbar } from '../Searchbar';
 import { SearchableDocument } from '@/types';
+import { ColorSchemeSwitch } from './ColorSchemeSwitch';
 
 type HeaderProps = {
   docs: SearchableDocument[];
@@ -36,6 +37,7 @@ export async function Header({ docs, searchIndex }: HeaderProps) {
         >
           <GithubLogo />
         </SnowLink>
+        <ColorSchemeSwitch />
       </section>
     </header>
   );

@@ -49,7 +49,7 @@ export default async function RootLayout({
   const searchIndex = JSON.stringify(lunrIndex);
 
   return (
-    <html lang='en'>
+    <html lang='en' className='theme-light'>
       <body className={`${inter.className} antialiased`}>
         <Header docs={searchableDocs} searchIndex={searchIndex} />
         {children}
