@@ -2,13 +2,12 @@ import Image from 'next/image';
 import { PropsWithChildren } from 'react';
 import styles from './ComponentMeta.module.scss';
 import { SnowLink } from '../SnowLink';
+import { GithubIcon } from '@arctic-kit/icons';
 const gitSourceBasePath =
   'https://github.com/arctic-design/arctic-kit/tree/main/packages/snow/src/lib';
 
 const storybookBasePath =
   'https://main--6698d2827829aaad6dc5d14f.chromatic.com/?path=/docs';
-
-const basePath = process.env.NEXT_PUBLIC_ASSET_PREFIX || '';
 
 type ComponentMetaProps = {
   title: string;
@@ -40,13 +39,7 @@ export function ComponentMeta({
           </SnowLink>
         </div>
         <div className={styles.row}>
-          <Image
-            alt='github-mark logo'
-            src={`${basePath}/images/github-mark.png`}
-            width={16}
-            height={16}
-            priority
-          />
+          <GithubIcon />
           <SnowLink href={`${gitSourceBasePath}/${title}`} target='_blank'>
             View source code
           </SnowLink>

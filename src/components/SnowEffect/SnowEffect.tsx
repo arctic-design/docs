@@ -1,4 +1,4 @@
 import styles from './SnowEffect.module.scss';
-export function SnowEffect() {
-  return <div className={styles.snow}></div>;
+export function SnowEffect({ id = 'snow-effect' }: { id?: string }) {
+  return <div id={id} className={styles.snow}></div>;
 }
