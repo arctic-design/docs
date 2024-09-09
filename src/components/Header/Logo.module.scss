@@ -1,5 +1,9 @@
 .container {
   fill: var(--snow-colors-grey-900);
+
+  &:hover {
+    fill: var(--snow-colors-primary-main);
+  }
   &.shift {
     transition: margin-left 0.15s ease;
     // transform: translateX(0);
