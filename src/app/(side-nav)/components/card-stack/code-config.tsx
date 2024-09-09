@@ -18,7 +18,11 @@ function Demo() {
         {Array.from({ length: 5 }).map((_, index) => (
           <Box
             key={index}
-            sx={{ padding: '12px 8px', backgroundColor: '#fff', margin: 4 }}
+            sx={{
+              padding: '12px 8px',
+              backgroundColor: 'var(--snow-colors-neutral-0)',
+              margin: 4,
+            }}
             as='p'
           >
             This could be a section {index + 1} element
@@ -217,7 +221,11 @@ function Demo({ children, totalItems, ...props }: CardStackProps) {
         {Array.from({ length: 5 }).map((_, index) => (
           <Box
             key={index}
-            sx={{ padding: '12px 8px', backgroundColor: '#fff', margin: 4 }}
+            sx={{
+              padding: '12px 8px',
+              backgroundColor: 'var(--snow-colors-neutral-0)',
+              margin: 4,
+            }}
             as='p'
           >
             This could be a section {index + 1} element
