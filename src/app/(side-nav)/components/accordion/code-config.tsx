@@ -1,6 +1,8 @@
 import { CodeConfigType, ComponentPropDefs } from '@/types';
 import { Accordion, AccordionItem, AccordionProps } from '@arctic-kit/snow';
 import { PropsWithChildren } from 'react';
+import { AdvanceExample } from './advance-example';
+import AdvanceExampleSrc from './advance-example.tsx?raw';
 
 const code = `
 import { Accordion, AccordionItem } from '@arctic-kit/snow';
@@ -57,5 +59,13 @@ export const codeConfig: CodeConfigType = {
   centered: true,
   maxWidth: 440,
   code,
+  propDefs,
+};
+
+export const advanceCodeConfig: CodeConfigType = {
+  component: AdvanceExample,
+  centered: true,
+  maxWidth: 440,
+  code: AdvanceExampleSrc,
   propDefs,
 };
