@@ -12,10 +12,10 @@
     "serve": "serve -l 5005 -s out"
   },
   "dependencies": {
-    "@arctic-kit/colors": "^0.18.2",
-    "@arctic-kit/icons": "^0.18.2",
-    "@arctic-kit/snow": "^0.18.2",
-    "@floating-ui/react": "^0.26.23",
+    "@arctic-kit/colors": "^0.18.4",
+    "@arctic-kit/icons": "^0.18.4",
+    "@arctic-kit/snow": "^0.18.4",
+    "@floating-ui/react": "^0.26.24",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.9",
@@ -44,7 +44,7 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.9",
     "eslint-config-prettier": "^9.1.0",
-    "framer-motion": "^11.3.24",
+    "framer-motion": "^11.5.4",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
     "prettier": "3.3.3",
