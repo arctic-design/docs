@@ -1,5 +1,5 @@
 .codeBlock {
-  background-color: var(--snow-colors-neutral-0);
+  background-color: var(--code-block-bg-color);
   overflow-x: auto;
   display: flex;
   justify-content: space-between;
@@ -13,7 +13,7 @@
 
   .container {
     padding: 1rem;
-    background-color: var(--snow-colors-neutral-0);
+    background-color: var(--code-block-bg-color);
     overflow-x: auto;
     flex: 1;
   }
@@ -21,17 +21,19 @@
   &:hover {
     button {
       opacity: 1;
-      border: 1px solid var(--snow-colors-grey-200);
+      border: 1px solid var(--snow-colors-white);
     }
   }
   max-height: 0;
   transition: max-height 0.3s ease;
   overflow-y: auto;
   border: 1px solid var(--snow-colors-grey-200);
+  border-width: 0;
   border-radius: 4px;
 
   &.visible {
     max-height: 500px;
+    border-width: 1px;
   }
 }
 

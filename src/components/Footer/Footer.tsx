@@ -7,7 +7,13 @@ export const Footer = () => {
       <p>Made with ❤️ and a few ☕ of coffee</p>
       <div className={styles.builtBy}>
         <span>Built by</span>
-        <SnowLink href='https://github.com/barunprasad'>Barun Prasad</SnowLink>
+        <SnowLink
+          href='https://www.barunprasad.com'
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          Barun Prasad
+        </SnowLink>
       </div>
     </footer>
   );

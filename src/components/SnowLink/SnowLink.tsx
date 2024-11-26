@@ -7,6 +7,7 @@ type SnowLinkProps = {
   className?: string;
   href: string;
   target?: string;
+  rel?: string;
 };
 export const SnowLink = forwardRef<
   HTMLAnchorElement,

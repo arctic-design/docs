@@ -9,6 +9,9 @@
     #f9fcfe 50%,
     #f0f9ff 100%
   );
+
+  --code-block-bg-color: #262052;
+  --code-block-color: #fff;
 }
 
 * {
@@ -36,11 +39,14 @@ body {
     #f9fcfe 50%,
     #f0f9ff 100%
   );
+
+  --code-block-bg-color: #262052;
 }
 
 /* Dark Theme */
 .theme-dark {
   --background-gradient: var(--snow-colors-neutral-0);
+  --code-block-bg-color: #0c0734;
 }
 
 .arctic-icon-medium {

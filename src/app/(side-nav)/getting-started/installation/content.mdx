@@ -54,13 +54,9 @@ To ensure the components render correctly, include the necessary font files in y
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { extendTheme, pigment } from '@pigment-css/vite-plugin';
-import { createDefaultTheme } from '@arctic-kit/snow';
+import { createColorSchemes } from '@arctic-kit/snow';
 
-const defaultTheme = createDefaultTheme();
-const theme = extendTheme({
-...defaultTheme,
-cssVarPrefix: 'snow',
-});
+const theme = extendTheme(createColorSchemes());
 
 export default defineConfig({
   plugins: [
@@ -100,13 +96,9 @@ import '@arctic-kit/snow/style.css';
 {
 `
 import { withPigment, extendTheme } from '@pigment-css/nextjs-plugin';
-import { createDefaultTheme } from '@arctic-kit/snow';
+import { createColorSchemes } from '@arctic-kit/snow';
 
-const defaultTheme = createDefaultTheme();
-const theme = extendTheme({
-...defaultTheme,
-cssVarPrefix: 'snow',
-});
+const theme = extendTheme(createColorSchemes());
 
 export default withPigment({...nextConfig}, {
     theme,
