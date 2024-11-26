@@ -1,20 +1,9 @@
 import createMDX from '@next/mdx';
 import { withPigment, extendTheme } from '@pigment-css/nextjs-plugin';
-import { createDefaultTheme } from '@arctic-kit/snow';
+import { createColorSchemes } from '@arctic-kit/snow';
 import path from 'path';
 
-const lightTheme = createDefaultTheme();
-const darkTheme = createDefaultTheme(true);
-
-const theme = extendTheme({
-  colorSchemes: {
-    light: lightTheme,
-    dark: darkTheme,
-  },
-  cssVarPrefix: 'snow',
-  getSelector: (colorScheme) =>
-    colorScheme ? `.theme-${colorScheme}` : ':root',
-});
+const theme = extendTheme(createColorSchemes());
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
