@@ -3,6 +3,7 @@ import { PropsWithChildren } from 'react';
 import styles from './ComponentMeta.module.scss';
 import { SnowLink } from '../SnowLink';
 import { GithubIcon } from '@arctic-kit/icons';
+import { ApiReference } from './ApiReference';
 const gitSourceBasePath =
   'https://github.com/arctic-design/arctic-kit/tree/main/packages/snow/src/lib';
 
@@ -61,6 +62,10 @@ export function ComponentMeta({
         </div>
       </div>
       <div className={styles.usageContent}>{children}</div>
+      <div className={styles.usageContent}>
+        <h2>API Reference</h2>
+        <ApiReference name={title} />
+      </div>
     </div>
   );
 }

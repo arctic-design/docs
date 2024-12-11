@@ -1,0 +1,20 @@
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.tableCellData {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.iconContainer {
+  display: inline-flex;
+}
+
+.icon {
+  width: 14px;
+}
