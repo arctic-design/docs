@@ -43,15 +43,15 @@ const ColorPalette = (props: { color: SnowColorType; name: string }) => {
     <>
       <Box
         as='li'
-        sx={{
+        style={{
           backgroundColor: color.main,
-          color: 'var(--snow-colors-neutral-0)',
+          color: 'var(--snow-colors-white)',
         }}
       >
-        <Box sx={{ marginBottom: 60 }}>{name}</Box>
+        <Box style={{ marginBottom: 60 }}>{name}</Box>
         <div className='color-swatch'>
           <Box
-            sx={{
+            style={{
               color: mainTextColor,
             }}
           >
@@ -59,7 +59,7 @@ const ColorPalette = (props: { color: SnowColorType; name: string }) => {
           </Box>
           <ColorCode
             onClick={() => handleCopyToClipboard(color.main)}
-            sx={{
+            style={{
               color: mainTextColor,
             }}
           >
@@ -76,14 +76,14 @@ const ColorPalette = (props: { color: SnowColorType; name: string }) => {
             <Box
               key={colorKey}
               as='li'
-              sx={{
+              style={{
                 backgroundColor: (color as any)[colorKey],
                 color: 'var(--snow-colors-neutral-0)',
               }}
             >
               <div className='color-swatch'>
                 <Box
-                  sx={{
+                  style={{
                     color: variantTextColor,
                   }}
                 >
@@ -95,7 +95,7 @@ const ColorPalette = (props: { color: SnowColorType; name: string }) => {
                     onClick={() =>
                       handleCopyToClipboard((color as any)[colorKey])
                     }
-                    sx={{
+                    style={{
                       color: variantTextColor,
                     }}
                   >
@@ -118,6 +118,7 @@ const Container = styled.div({
     padding: 0,
     margin: '0 16px 16px 0',
     flexGrow: 1,
+    listStyle: 'none',
 
     '@media (min-width: 600px)': {
       flexGrow: 0,
@@ -125,12 +126,11 @@ const Container = styled.div({
     },
 
     li: {
-      fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
       fontWeight: 400,
       fontSize: '0.875rem',
       lineHeight: 1.43,
       letterSpacing: '0.01071em',
-      padding: '15px',
+      padding: '15px !important',
 
       '.color-swatch': {
         display: 'flex',
