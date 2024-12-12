@@ -1,10 +1,14 @@
 import styles from '@/styles/markdown.module.scss';
 import Content from './content.md';
 import { ColorVariants } from './color-variants';
+import { ColorShades } from './ColorShades';
 
 <div className={styles.container}>
   <Content />
   <div className={styles.moreInfo}>
     <ColorVariants />
+  </div>
+  <div className={styles.moreInfo}>
+    <ColorShades />
   </div>
 </div>
