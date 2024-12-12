@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import styles from './ScrollToTop.module.scss';
+import { ArrowLongUpIcon } from '@arctic-kit/icons';
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,7 +32,7 @@ export function ScrollToTop() {
       aria-label='Scroll to top'
       className={`${styles.scrollToTop} ${!isVisible ? styles.hidden : ''}`}
     >
-      <span className={styles.icon}>↑</span>
+      <ArrowLongUpIcon />
     </button>
   );
 }
