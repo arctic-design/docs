@@ -1,6 +1,9 @@
 import styles from './page.module.scss';
 import { Button, Grid, GridColumn, GridRow } from '@arctic-kit/snow';
 import { Feature } from '@/components/Feature';
+import { LottieAnimation, LottieSkeleton } from '@/components/LottieAnimation';
+import animationData from '@/assets/lottie/design_system.json';
+import { Suspense } from 'react';
 import { SnowLink } from '@/components/SnowLink';
 import { Footer } from '@/components/Footer';
 
@@ -24,12 +27,17 @@ export default function Home() {
             </SnowLink>
           </div>
         </div>
+        <div className={styles.imageWrapper}>
+          <Suspense fallback={<LottieSkeleton />}>
+            <LottieAnimation animationData={animationData} />
+          </Suspense>
+        </div>
       </section>
       <section className={styles.content}>
         <Grid spacing={2}>
           <GridRow>
             <GridColumn>
-              <div className={styles.title}>Core Fundamentals</div>
+              <div className={styles.title}>Key Features</div>
             </GridColumn>
           </GridRow>
           <GridRow>
