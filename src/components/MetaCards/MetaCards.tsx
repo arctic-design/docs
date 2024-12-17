@@ -1,6 +1,7 @@
 import { MetaType } from '@/types';
 import Link from 'next/link';
 import styles from './MetaCards.module.scss';
+import { MagicBox } from '../MagicBox';
 
 export function MetaCards({
   metaInfo,
@@ -13,10 +14,10 @@ export function MetaCards({
     <div className={styles.container}>
       {metaInfo.map((meta) => (
         <Link key={meta?.title} href={`/${meta?.slug}`}>
-          <div className={styles.item} style={{ maxWidth: itemMaxWidth }}>
+          <MagicBox className={styles.item} style={{ maxWidth: itemMaxWidth }}>
             <div className={styles.title}>{meta?.title}</div>
             <div className={styles.subTitle}>{meta?.subTitle}</div>
-          </div>
+          </MagicBox>
         </Link>
       ))}
     </div>

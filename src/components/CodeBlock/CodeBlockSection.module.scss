@@ -4,11 +4,14 @@
   display: flex;
   justify-content: space-between;
   button {
-    opacity: 0;
+    opacity: 1;
     position: relative;
-    margin-right: 16px;
-    margin-top: 10px;
+    margin-right: 8px;
+    margin-top: 8px;
     z-index: 1;
+    &:hover {
+      border: 1px solid var(--snow-colors-white);
+    }
   }
 
   .container {
@@ -18,12 +21,6 @@
     flex: 1;
   }
 
-  &:hover {
-    button {
-      opacity: 1;
-      border: 1px solid var(--snow-colors-white);
-    }
-  }
   max-height: 0;
   transition: max-height 0.3s ease;
   overflow-y: auto;

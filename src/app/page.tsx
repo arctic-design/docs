@@ -1,38 +1,32 @@
 import styles from './page.module.scss';
-import { Grid, GridColumn, GridRow } from '@arctic-kit/snow';
+import { Button, Grid, GridColumn, GridRow } from '@arctic-kit/snow';
 import { Feature } from '@/components/Feature';
-import { LottieAnimation, LottieSkeleton } from '@/components/LottieAnimation';
-import animationData from '@/assets/lottie/design_system.json';
-import { Suspense } from 'react';
-import { SnowEffect } from '@/components/SnowEffect';
 import { SnowLink } from '@/components/SnowLink';
 import { Footer } from '@/components/Footer';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <SnowEffect />
       <section className={styles.header}>
         <div className={styles.centeredText}>
-          <h1>Arctic Design Kit</h1>
+          <h1 className='gradient-text'>Arctic Design Kit</h1>
           <p>
             Building modern and efficient UI components with the best tools.
           </p>
-          <SnowLink
-            href='/getting-started/overview'
-            className={styles.actionButton}
-          >
-            Get Started
-          </SnowLink>
-        </div>
-        <div className={styles.imageWrapper}>
-          <Suspense fallback={<LottieSkeleton />}>
-            <LottieAnimation animationData={animationData} />
-          </Suspense>
+          <div className={styles.headerActionContainer}>
+            <SnowLink href='/getting-started/overview'>
+              <Button size='large'>Get Started</Button>
+            </SnowLink>
+            <SnowLink href='/components'>
+              <Button size='large' variant='outlined'>
+                View Components
+              </Button>
+            </SnowLink>
+          </div>
         </div>
       </section>
       <section className={styles.content}>
-        <Grid>
+        <Grid spacing={2}>
           <GridRow>
             <GridColumn>
               <div className={styles.title}>Core Fundamentals</div>
@@ -41,14 +35,14 @@ export default function Home() {
           <GridRow>
             <GridColumn xs={12} md={6} lg={3}>
               <Feature
-                title='Zero Runtime CSS'
+                title='Zero-runtime CSS-in-JS'
                 description='Based on @pigment-css/react which extracts styles to CSS files at build time, ensuring zero-runtime overhead.'
               />
             </GridColumn>
             <GridColumn xs={12} md={6} lg={3}>
               <Feature
-                title='RSC Compatible'
-                description='Compatible with Next.js React Server Components (RSC) for seamless server-side rendering.'
+                title='React Server Components'
+                description='Compatible with React Server Components (RSC) for seamless server-side rendering.'
               />
             </GridColumn>
             <GridColumn xs={12} md={6} lg={3}>
