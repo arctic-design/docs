@@ -147,6 +147,28 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
+function Demo({ children, totalItems, ...props }: CardStackProps) {
+  return (
+    <Box sx={{ width: '100%' }}>
+      <CardStack totalItems={5} completedItems={2} {...props}>
+        {Array.from({ length: 5 }).map((_, index) => (
+          <Box
+            key={index}
+            sx={{
+              padding: '12px 8px',
+              backgroundColor: 'var(--snow-colors-neutral-0)',
+              margin: 4,
+            }}
+            as='p'
+          >
+            This could be a section {index + 1} element
+          </Box>
+        ))}
+      </CardStack>
+    </Box>
+  );
+}
+
 function AccordionChild({
   activeIndex = 0,
   indexes,
@@ -211,28 +233,6 @@ function AccordionChild({
         This is the content of section 3.
       </AccordionItem>
     </Accordion>
-  );
-}
-
-function Demo({ children, totalItems, ...props }: CardStackProps) {
-  return (
-    <Box sx={{ width: '100%' }}>
-      <CardStack totalItems={5} completedItems={2} {...props}>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <Box
-            key={index}
-            sx={{
-              padding: '12px 8px',
-              backgroundColor: 'var(--snow-colors-neutral-0)',
-              margin: 4,
-            }}
-            as='p'
-          >
-            This could be a section {index + 1} element
-          </Box>
-        ))}
-      </CardStack>
-    </Box>
   );
 }
 
