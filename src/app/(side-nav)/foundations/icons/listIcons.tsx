@@ -111,7 +111,7 @@ export function ArcticIcons() {
                   .map(([iconName, IconComponent]) => (
                     <div className={styles.card} key={iconName}>
                       <CopyIconButton name={iconName} variant={iconVariant} />
-                      <IconComponent />
+                      <IconComponent className={styles.arcticIcon} />
                       <p>{formatIconName(iconName)}</p>
                     </div>
                   ))}
