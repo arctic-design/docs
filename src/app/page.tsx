@@ -83,20 +83,20 @@ export default function Home() {
             <GridColumn xs={12} lg={4}>
               <Feature
                 title='Snow'
-                description={`Arctic Design's Snow library, or @arctic-kit/snow, is a versatile React component library offering essential UI components for streamlined development and consistent application design. These components are meticulously crafted for seamless integration, providing both flexibility and ease of use.`}
+                description={`Arctic Design's Snow library, or @arctic-kit/snow, is a React component library offering essential UI components for streamlined development and consistent application design.`}
                 href='/components'
               />
             </GridColumn>
             <GridColumn xs={12} lg={4}>
               <Feature
                 title='Iceberg'
-                description={`The Iceberg project is an AI-powered form builder designed to revolutionize form creation and management within web applications. Currently in development, Iceberg will provide intelligent features to simplify and enhance the form-building process`}
+                description={`The Iceberg project is an AI-powered form builder designed to revolutionize form creation and management within web applications. Currently in development.`}
               />
             </GridColumn>
             <GridColumn xs={12} lg={4}>
               <Feature
                 title='Aurora'
-                description={`The Aurora project is an AI-powered WYSIWYG editor that aims to revolutionize content creation and editing within the Arctic Design ecosystem. Currently under development, Aurora promises a range of innovative features to enhance the editing process`}
+                description={`The Aurora project is an AI-powered WYSIWYG editor that aims to revolutionize content creation and editing within the Arctic Design ecosystem. Currently under development.`}
               />
             </GridColumn>
           </GridRow>
