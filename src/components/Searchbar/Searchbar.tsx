@@ -108,7 +108,7 @@ export function Searchbar({ searchIndex, docs }: SearchbarProps) {
   return (
     <>
       <TextInput
-        placeholder='Search the docs'
+        placeholder='Search docs'
         prefix={<MagnifyingGlassIcon />}
         suffix={
           <IconButton size='small' onClick={() => setOpen(true)}>
@@ -124,12 +124,6 @@ export function Searchbar({ searchIndex, docs }: SearchbarProps) {
         className={styles.searchBarInputField}
         id='search-docs-input-dummy'
       />
-      <IconButton
-        className={styles.searchBarInputMobile}
-        onClick={() => setOpen(true)}
-      >
-        <MagnifyingGlassIcon />
-      </IconButton>
       <Modal
         hideHeader
         hideFooter

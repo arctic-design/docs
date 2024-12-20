@@ -13,6 +13,7 @@
   background: var(--header-bg-color);
   box-shadow: var(--header-box-shadow);
   z-index: 2;
+  gap: 6px;
 
   .left {
     display: flex;
@@ -26,19 +27,16 @@
   }
 
   .center {
-    display: none;
     display: flex;
     align-items: center;
     gap: 8px;
   }
+
   .right {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 16px;
-    svg {
-      width: 18px;
-    }
+    gap: 12px;
   }
 }
 
@@ -52,7 +50,7 @@
 
 @media (max-width: 768px) {
   .container {
-    .center {
+    .desktopOnly {
       display: none;
     }
   }

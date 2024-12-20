@@ -20,11 +20,11 @@ export async function Header({ docs, searchIndex }: HeaderProps) {
           <Logo />
         </Suspense>
 
-        <SnowLink href='/' className={styles.title}>
+        <SnowLink href='/' className={`${styles.title} ${styles.desktopOnly}`}>
           Arctic Design
         </SnowLink>
       </section>
-      <section className={styles.center}>
+      <section className={`${styles.center} ${styles.desktopOnly}`}>
         <SnowLink href='/getting-started/overview'>Get Started</SnowLink>
         <SnowLink href='/foundations'>Foundations</SnowLink>
         <SnowLink href='/components'>Components</SnowLink>
