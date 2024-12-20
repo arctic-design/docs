@@ -1,3 +1,4 @@
+'use client';
 import { CodeConfigType, ComponentPropDefs } from '@/types';
 import { TextArea, TextAreaProps } from '@arctic-kit/snow';
 import { useState } from 'react';

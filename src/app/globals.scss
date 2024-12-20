@@ -48,6 +48,12 @@
       var(--arctic-light-3),
       var(--arctic-light-4)
     );
+
+  --component-display-bg: linear-gradient(
+    120deg,
+    color(display-p3 0.963 0.867 0.932),
+    color(display-p3 0.88 0.865 0.816)
+  );
 }
 
 * {
@@ -96,6 +102,12 @@ body {
 
   --header-bg-color: #fffc;
   --header-box-shadow: inset 0 -1px 0 0 var(--accents-2);
+
+  --component-display-bg: linear-gradient(
+    120deg,
+    color(display-p3 0.963 0.867 0.932),
+    color(display-p3 0.88 0.865 0.816)
+  );
 }
 
 /* Dark Theme */
@@ -122,6 +134,12 @@ body {
   .gradient-text {
     --text-gradient: linear-gradient(180deg, #fff, #adadad);
   }
+
+  --component-display-bg: linear-gradient(
+    120deg,
+    color(display-p3 0.245 0.309 0.575),
+    color(display-p3 0.073 0.168 0.209)
+  );
 }
 
 // .arctic-icon-medium {

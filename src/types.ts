@@ -39,6 +39,7 @@ export type MetaType = {
   title: string;
   subTitle: string;
   slug: string;
+  component?: React.JSX.ElementType;
 };
 
 export interface Document {

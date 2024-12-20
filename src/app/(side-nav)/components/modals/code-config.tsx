@@ -87,7 +87,7 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: ModalProps) {
+export function Demo(props: ModalProps) {
   const [open, setOpen] = useState(false);
   const toggleModal = () => {
     setOpen(!open);

@@ -22,7 +22,7 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: CalendarProps) {
+export function Demo(props: CalendarProps) {
   const [value, setValue] = useState(new Date());
   return <Calendar {...props} selected={value} onSelect={setValue} />;
 }

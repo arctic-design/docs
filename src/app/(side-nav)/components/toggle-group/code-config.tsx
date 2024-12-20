@@ -17,6 +17,12 @@ import {
 } from '@arctic-kit/snow';
 
 import {
+  Bars3BottomLeftIcon,
+  Bars3BottomRightIcon,
+  Bars3Icon,
+} from '@arctic-kit/icons';
+
+import {
   BuildingOffice2Icon,
   UserGroupIcon,
   UserIcon,
@@ -28,17 +34,23 @@ import {
   ToggleGroupItem,
 } from '@arctic-kit/snow';
 
+import {
+  Bars3BottomLeftIcon,
+  Bars3BottomRightIcon,
+  Bars3Icon,
+} from '@arctic-kit/icons';
+
 function Demo() {
   return (
     <ToggleGroup {{props}}>
-      <ToggleGroupItem value='b'>
-        <b>B</b>
+      <ToggleGroupItem value="b">
+        <Bars3BottomLeftIcon width={16} />
       </ToggleGroupItem>
-      <ToggleGroupItem value='i'>
-        <i>I</i>
+      <ToggleGroupItem value="u">
+        <Bars3Icon width={16} />
       </ToggleGroupItem>
-      <ToggleGroupItem value='u'>
-        <u>U</u>
+      <ToggleGroupItem value="i">
+        <Bars3BottomRightIcon width={16} />
       </ToggleGroupItem>
     </ToggleGroup>
   );
@@ -171,17 +183,17 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function DefaultDemo({ children, ...props }: ToggleGroupProps) {
+export function Demo({ children, ...props }: ToggleGroupProps) {
   return (
-    <ToggleGroup {...props}>
+    <ToggleGroup singleSelect spacing={0} {...props}>
       <ToggleGroupItem value='b'>
-        <b>B</b>
-      </ToggleGroupItem>
-      <ToggleGroupItem value='i'>
-        <i>I</i>
+        <Bars3BottomLeftIcon width={16} />
       </ToggleGroupItem>
       <ToggleGroupItem value='u'>
-        <u>U</u>
+        <Bars3Icon width={16} />
+      </ToggleGroupItem>
+      <ToggleGroupItem value='i'>
+        <Bars3BottomRightIcon width={16} />
       </ToggleGroupItem>
     </ToggleGroup>
   );
@@ -283,7 +295,7 @@ function AdvanceDemo({ children, ...props }: ToggleGroupProps) {
 }
 
 export const codeConfig: CodeConfigType = {
-  component: DefaultDemo,
+  component: Demo,
   centered: true,
   maxWidth: 440,
   code: defaultCode,

@@ -32,23 +32,20 @@ function Demo() {
 
 const propDefs: ComponentPropDefs[] = [];
 
-function Demo(props: PropsWithChildren<AccordionProps>) {
+export function Demo(props: PropsWithChildren<AccordionProps>) {
   return (
-    <Accordion {...props}>
-      <AccordionItem title='Section 1'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet
-        dolor vitae orci aliquam, vel vulputate ipsum tincidunt. Praesent nec
-        tortor ut eros tristique blandit.
+    <Accordion spacing={0} {...props}>
+      <AccordionItem title='Fast Performance'>
+        Experience lightning-fast load times and seamless interactions with our
+        optimized platform.
       </AccordionItem>
-      <AccordionItem title='Section 2'>
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-        cubilia curae; Integer scelerisque, massa non auctor efficitur, ligula
-        nunc gravida erat, sit amet viverra elit arcu ut arcu.
+      <AccordionItem title='Secure Data'>
+        Your data is protected with top-notch security measures, ensuring
+        privacy and integrity.
       </AccordionItem>
-      <AccordionItem title='Section 3'>
-        Suspendisse potenti. Cras sollicitudin, neque sed faucibus consequat,
-        est nunc ultricies nunc, nec ullamcorper arcu orci non purus. Nam vel
-        magna nec turpis ullamcorper venenatis.
+      <AccordionItem title='24/7 Support'>
+        Our dedicated support team is available around the clock to assist you
+        with any inquiries.
       </AccordionItem>
     </Accordion>
   );

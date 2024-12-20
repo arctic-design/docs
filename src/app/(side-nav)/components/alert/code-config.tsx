@@ -14,6 +14,9 @@ function Demo() {
 }
 `;
 
+const defaultChildren =
+  'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt corporis natus veniam quis.';
+
 const propDefs: ComponentPropDefs[] = [
   {
     name: 'severity',
@@ -37,13 +40,12 @@ const propDefs: ComponentPropDefs[] = [
   {
     name: 'children',
     type: 'text',
-    defaultValue:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt corporis natus veniam quis.',
+    defaultValue: defaultChildren,
   },
 ];
 
-function Demo({ children, ...props }: PropsWithChildren<AlertProps>) {
-  return <Alert {...props}>{children}</Alert>;
+export function Demo({ children, ...props }: PropsWithChildren<AlertProps>) {
+  return <Alert {...props}>{children || defaultChildren}</Alert>;
 }
 
 export const codeConfig: CodeConfigType = {

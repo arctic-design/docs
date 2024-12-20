@@ -1,3 +1,4 @@
+'use client';
 import { CodeConfigType, ComponentPropDefs } from '@/types';
 import {
   Button,
@@ -111,7 +112,7 @@ const propDefs: ComponentPropDefs[] = [];
 
 type ChoiceType = 'strict' | 'functional' | 'performance';
 
-function Demo({ children, ...props }: PropsWithChildren<ListProps>) {
+export function Demo({ children, ...props }: PropsWithChildren<ListProps>) {
   const [preferences, setPreferences] = useState<{ [key: string]: boolean }>({
     strict: false,
     functional: true,
@@ -125,7 +126,7 @@ function Demo({ children, ...props }: PropsWithChildren<ListProps>) {
     }));
   }, []);
   return (
-    <Card sx={{ maxWidth: 420 }}>
+    <Card sx={{ maxWidth: 420 }} size='small'>
       <CardHeader>
         <CardTitle>Cookie Settings</CardTitle>
         <CardDescription>Manage your cookie settings here.</CardDescription>

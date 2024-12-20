@@ -70,7 +70,7 @@ export default function Home() {
             <GridColumn xs={12} md={6} lg={3}>
               <Feature
                 title='Interactive Animations'
-                description='Framer Motion makes it easy to create fluid animations in React.'
+                description='Framer Motion makes it easy to create fluid animations. Its a modern animation library for JavaScript and React.'
               />
             </GridColumn>
           </GridRow>

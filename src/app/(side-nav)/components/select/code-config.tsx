@@ -80,7 +80,11 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: SelectProps) {
+export function Demo(props: SelectProps) {
+  return <DefaultDemo value={{ label: 'Red', value: 'red' }} {...props} />;
+}
+
+function DefaultDemo(props: SelectProps) {
   return (
     <Select
       {...props}
@@ -99,7 +103,7 @@ function Demo(props: SelectProps) {
 }
 
 export const codeConfig: CodeConfigType = {
-  component: Demo,
+  component: DefaultDemo,
   centered: true,
   maxWidth: 440,
   code,
@@ -109,7 +113,7 @@ export const codeConfig: CodeConfigType = {
 };
 
 export const errorStateCodeConfig: CodeConfigType = {
-  component: Demo,
+  component: DefaultDemo,
   centered: true,
   maxWidth: 440,
   code,

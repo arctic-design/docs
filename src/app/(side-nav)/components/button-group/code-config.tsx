@@ -74,7 +74,7 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: ButtonGroupProps) {
+export function Demo(props: ButtonGroupProps) {
   return (
     <ButtonGroup {...props}>
       <Button>First</Button>

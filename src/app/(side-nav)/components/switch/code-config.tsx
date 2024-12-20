@@ -1,3 +1,4 @@
+'use client';
 import { CodeConfigType, ComponentPropDefs } from '@/types';
 import { Switch, SwitchProps } from '@arctic-kit/snow';
 import { useState } from 'react';
@@ -50,7 +51,7 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: SwitchProps) {
+export function Demo(props: SwitchProps) {
   const [checked, setChecked] = useState(false);
 
   return (

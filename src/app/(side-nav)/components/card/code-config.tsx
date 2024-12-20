@@ -80,6 +80,12 @@ function Demo() {
 
 const propDefs: ComponentPropDefs[] = [
   {
+    name: 'size',
+    type: 'segment',
+    values: ['small', 'medium', 'large'],
+    defaultValue: 'medium',
+  },
+  {
     name: 'variant',
     type: 'segment',
     values: ['elevation', 'outlined'],
@@ -99,9 +105,13 @@ const selectOptions = [
   { value: 'meetup', label: 'Meetup' },
 ];
 
-function Demo({ children, ...props }: PropsWithChildren<CardProps>) {
+export function Demo({
+  children,
+  size = 'small',
+  ...props
+}: PropsWithChildren<CardProps>) {
   return (
-    <Card {...props} sx={{ minWidth: 350 }}>
+    <Card size={size} {...props}>
       <CardHeader>
         <CardTitle>Create New Event</CardTitle>
         <CardDescription>
@@ -121,6 +131,7 @@ function Demo({ children, ...props }: PropsWithChildren<CardProps>) {
             options={selectOptions}
             placeholder='Select a category'
           />
+
           <DatePicker
             id='event-date'
             label='Date'

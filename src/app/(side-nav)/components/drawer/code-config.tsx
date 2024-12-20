@@ -143,7 +143,7 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: DrawerProps) {
+export function Demo(props: DrawerProps) {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);

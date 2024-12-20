@@ -68,11 +68,11 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo({ children, ...props }: PropsWithChildren<ButtonProps>) {
+export function Demo({ children, ...props }: PropsWithChildren<ButtonProps>) {
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', gap: 8 }}>
       <Button>Default Button</Button>
-      <Button {...props}>{children}</Button>
+      {children && <Button {...props}>{children}</Button>}
     </Box>
   );
 }

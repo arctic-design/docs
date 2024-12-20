@@ -177,7 +177,7 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function DefaultDemo(props: PopoverOptions) {
+export function Demo(props: PopoverOptions) {
   const [open, setOpen] = useState(false);
   return (
     <div>
@@ -292,7 +292,7 @@ function CustomTriggerDemo() {
 }
 
 export const codeConfig: CodeConfigType = {
-  component: DefaultDemo,
+  component: Demo,
   centered: true,
   maxWidth: 440,
   code: defaultCode,

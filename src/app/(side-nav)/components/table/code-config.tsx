@@ -1,3 +1,4 @@
+'use client';
 import { CodeConfigType, ComponentPropDefs } from '@/types';
 import { Table, TableRootProps } from '@arctic-kit/snow';
 
@@ -62,7 +63,7 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: TableRootProps) {
+export function Demo(props: TableRootProps) {
   return (
     <Table.Root {...props}>
       <Table.Header>

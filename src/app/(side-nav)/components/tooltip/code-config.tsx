@@ -15,11 +15,13 @@ function Demo() {
 }
 `;
 
+const defaultMessage = 'This is Button content of tooltip';
+
 const propDefs: ComponentPropDefs[] = [
   {
     name: 'message',
     type: 'text',
-    defaultValue: 'This is Button content of tooltip',
+    defaultValue: defaultMessage,
   },
   {
     name: 'placement',
@@ -42,10 +44,16 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: { message: string; placement?: PopoverPlacement }) {
+export function Demo({
+  message = defaultMessage,
+  ...props
+}: {
+  message: string;
+  placement?: PopoverPlacement;
+}) {
   return (
-    <Tooltip {...props}>
-      <Button>Trigger Element</Button>
+    <Tooltip message={message} {...props}>
+      <Button>Hover over me</Button>
     </Tooltip>
   );
 }
