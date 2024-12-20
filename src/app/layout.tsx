@@ -6,6 +6,7 @@ import '@arctic-kit/snow/style.css';
 import { Header } from '@/components/Header';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { getSearchContent } from '@/app/action';
+import { siteMetadata } from './siteMetadata';
 
 import lunr from 'lunr';
 
@@ -15,10 +16,7 @@ const inter = Inter({
   weight: ['400', '500', '600', '700', '900'],
 });
 
-export const metadata: Metadata = {
-  title: 'Arctic Design',
-  description: 'Arctic Design docs app',
-};
+export const metadata: Metadata = { ...siteMetadata };
 
 export default async function RootLayout({
   children,
