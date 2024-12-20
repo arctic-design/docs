@@ -3,9 +3,7 @@
   padding: 20px;
   background-color: var(--snow-colors-neutral-0);
   color: var(--snow-colors-neutral-1000);
-  //   position: fixed;
   width: 100%;
-  //   bottom: 0;
 
   display: flex;
   justify-content: center;
@@ -18,15 +16,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // gap: 4px;
     font-size: 12px;
     a {
       color: var(--snow-colors-neutral-1000);
       font-size: 12px;
-
+      text-decoration: underline;
       padding-left: 4px;
       &:hover {
-        text-decoration: underline;
+        color: var(--snow-colors-primary-main);
       }
     }
   }
