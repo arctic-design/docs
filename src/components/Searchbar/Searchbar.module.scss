@@ -11,21 +11,21 @@
     background-color: var(--snow-colors-neutral-0);
     cursor: pointer;
   }
-  @media (max-width: 480px) {
-    display: none;
-  }
+  // @media (max-width: 480px) {
+  //   display: none;
+  // }
 
-  @media screen and (min-width: 481px) {
-    display: block;
-  }
+  // @media screen and (min-width: 481px) {
+  //   display: block;
+  // }
 }
 
-.searchBarInputMobile {
-  @media (max-width: 480px) {
-    display: flex;
-  }
+// .searchBarInputMobile {
+//   @media (max-width: 480px) {
+//     display: flex;
+//   }
 
-  @media screen and (min-width: 481px) {
-    display: none;
-  }
-}
+//   @media screen and (min-width: 481px) {
+//     display: none;
+//   }
+// }
