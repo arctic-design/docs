@@ -2,16 +2,14 @@
   width: 100vw;
   // height: calc(100vh - var(--header-height));
   overflow-y: auto;
-  margin-top: var(--header-height);
 }
 .header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 24px;
-  padding: 24px;
-  //   border-bottom: 0.25px solid grey;
-  background: var(--background-gradient);
+  padding: 12px;
+  padding-top: calc(var(--header-height) + 20px);
 
   .centeredText {
     text-align: center;
@@ -57,6 +55,28 @@
   .imageWrapper {
     display: none; // default hidden
   }
+
+  .headerActionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+
+    button {
+      width: 100%;
+      font-weight: 500;
+    }
+  }
+}
+
+.examples {
+  // background: var(--background-gradient);
+  margin-top: 32px;
+}
+
+.examplesWrapper {
+  padding: 16px;
+  overflow-x: auto;
 }
 
 .content {
@@ -78,14 +98,23 @@
         font-size: 1.125rem; // slightly larger for small screens
       }
     }
+
+    .headerActionContainer {
+      flex-direction: row;
+      width: auto;
+      align-items: center;
+      button {
+        width: auto;
+      }
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
   .header {
     .centeredText {
-      align-items: flex-start;
-      text-align: left;
+      // align-items: flex-start;
+      // text-align: left;
       h1 {
         font-size: 3rem; // medium size for medium screens
       }
@@ -101,7 +130,7 @@
   }
   .content {
     .title {
-      font-size: 3rem;
+      font-size: 2rem;
     }
   }
 }

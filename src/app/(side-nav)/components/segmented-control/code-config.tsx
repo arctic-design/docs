@@ -40,7 +40,7 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: SegmentedControlProps) {
+export function Demo(props: SegmentedControlProps) {
   return (
     <SegmentedControl {...props}>
       <SegmentedControlButton>React</SegmentedControlButton>

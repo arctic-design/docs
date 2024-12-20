@@ -6,7 +6,7 @@ import { Suspense } from 'react';
 import { LogoSkeleton } from './LogoSkeleton';
 import { Searchbar } from '../Searchbar';
 import { SearchableDocument } from '@/types';
-import { ColorSchemeSwitch } from './ColorSchemeSwitch';
+import { ThemeSwitch } from '@arctic-kit/snow';
 
 type HeaderProps = {
   docs: SearchableDocument[];
@@ -37,7 +37,9 @@ export async function Header({ docs, searchIndex }: HeaderProps) {
         >
           <GithubLogo />
         </SnowLink>
-        <ColorSchemeSwitch />
+        <Suspense fallback={<div style={{ width: 100, height: 30 }} />}>
+          <ThemeSwitch />
+        </Suspense>
       </section>
     </header>
   );

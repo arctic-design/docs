@@ -1,7 +1,8 @@
 'use client';
 import { CodeConfigType, ComponentPropDefs } from '@/types';
 import {
-  IconButton,
+  Button,
+  Paper,
   Popover,
   PopoverClose,
   PopoverContent,
@@ -9,9 +10,11 @@ import {
   PopoverHeading,
   PopoverOptions,
   PopoverTrigger,
+  Stack,
 } from '@arctic-kit/snow';
-import { EllipsisHorizontalIcon } from '@arctic-kit/icons/solid';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
+import { ChevronDownIcon } from '@arctic-kit/icons';
+import { styled } from '@pigment-css/react';
 
 const defaultCode = `
 import { useState } from 'react';
@@ -45,37 +48,109 @@ function Demo() {
 `;
 
 const customTriggerCode = `
-import { useState } from 'react';
 import {
-  IconButton,
+  Button,
+  Paper,
   Popover,
-  PopoverClose,
   PopoverContent,
-  PopoverDescription,
-  PopoverHeading,
-  PopoverOptions,
   PopoverTrigger,
+  Stack,
 } from '@arctic-kit/snow';
- import { EllipsisHorizontalIcon } from '@arctic-kit/icons/solid';
+import { useCallback, useState } from 'react';
+import { ChevronDownIcon } from '@arctic-kit/icons';
+import { styled } from '@pigment-css/react';
+
+ const UserRoles = [
+  { name: 'Member', description: 'Can view resources' },
+  { name: 'Viewer', description: 'Can view and comment' },
+  { name: 'Developer', description: 'Can view, comment and edit' },
+  { name: 'Billing', description: 'Can view, comment and manage billing' },
+  { name: 'Owner', description: 'Admin-level access to all resources' },
+];
+
+const RoleContainer = styled.div(() => ({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 6,
+  padding: 8,
+  fontSize: 12,
+  '&:hover': {
+    backgroundColor: 'var(--snow-colors-grey-100)',
+    cursor: 'default',
+  },
+
+  '.title': {
+    fontWeight: 500,
+  },
+  '.description': {
+    fontWeight: 400,
+    color: 'var(--snow-colors-grey-700)',
+  },
+
+  '&.active': {
+    backgroundColor: 'var(--snow-colors-primary-50)',
+  },
+}));
+
+function UserRolePopover({
+  setOpen,
+  open,
+  selectedRole,
+  onRoleSelect,
+}: {
+  setOpen: (value: boolean) => void;
+  open?: boolean;
+  selectedRole: string;
+  onRoleSelect: (role: string) => void;
+}) {
+  return (
+    <Popover placement='bottom-start' open={open} onOpenChange={setOpen}>
+      <PopoverTrigger onClick={() => setOpen(!open)} asChild>
+        <Button
+          variant='outlined'
+          style={{ fontSize: 12 }}
+          suffix={<ChevronDownIcon style={{ width: 14 }} />}
+          noHighlights
+        >
+          {selectedRole}
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent>
+        <Stack
+          style={{ maxHeight: 500, overflowY: 'auto', padding: 4 }}
+          spacing={2}
+        >
+          {UserRoles.map((role) => (
+            <RoleContainer
+              key={role.name}
+              onClick={() => onRoleSelect(role.name)}
+              className={role.name === selectedRole ? 'active' : ''}
+            >
+              <div className='title'>{role.name}</div>
+              <div className='description'>{role.description}</div>
+            </RoleContainer>
+          ))}
+        </Stack>
+      </PopoverContent>
+    </Popover>
+  );
+}
 
 function Demo() {
   const [open, setOpen] = useState(false);
+  const [selectedRole, setSelectedRole] = useState(UserRoles[0].name);
+  const onRoleSelect = useCallback((roleName: string) => {
+    setSelectedRole(roleName);
+    setOpen(false);
+  }, []);
 
   return (
-    <div>
-      <Popover {{props}} open={open} onOpenChange={setOpen}>
-        <PopoverTrigger onClick={() => setOpen((v) => !v)} asChild>
-          <IconButton>
-            <EllipsisHorizontalIcon />
-          </IconButton>
-        </PopoverTrigger>
-        <PopoverContent>
-          <PopoverHeading>My popover heading</PopoverHeading>
-          <PopoverDescription>My popover description</PopoverDescription>
-          <PopoverClose>Close</PopoverClose>
-        </PopoverContent>
-      </Popover>
-    </div>
+    <UserRolePopover
+      open={open}
+      setOpen={setOpen}
+      selectedRole={selectedRole}
+      onRoleSelect={onRoleSelect}
+    />
   );
 }
 `;
@@ -102,47 +177,122 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function DefaultDemo(props: PopoverOptions) {
+export function Demo(props: PopoverOptions) {
   const [open, setOpen] = useState(false);
   return (
     <div>
       <Popover {...props} open={open} onOpenChange={setOpen}>
         <PopoverTrigger onClick={() => setOpen((v) => !v)}>
-          My Trigger
+          Open popover
         </PopoverTrigger>
         <PopoverContent>
-          <PopoverHeading>My popover heading</PopoverHeading>
-          <PopoverDescription>My popover description</PopoverDescription>
-          <PopoverClose>Close</PopoverClose>
+          <Paper elevation={0}>
+            <PopoverHeading>My popover heading</PopoverHeading>
+            <PopoverDescription>My popover description</PopoverDescription>
+            <PopoverClose>Close</PopoverClose>
+          </Paper>
         </PopoverContent>
       </Popover>
     </div>
   );
 }
 
-function CustomTriggerDemo(props: PopoverOptions) {
+const UserRoles = [
+  { name: 'Member', description: 'Can view resources' },
+  { name: 'Viewer', description: 'Can view and comment' },
+  { name: 'Developer', description: 'Can view, comment and edit' },
+  { name: 'Billing', description: 'Can view, comment and manage billing' },
+  { name: 'Owner', description: 'Admin-level access to all resources' },
+];
+
+const RoleContainer = styled.div(() => ({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 6,
+  padding: 8,
+  fontSize: 12,
+  '&:hover': {
+    backgroundColor: 'var(--snow-colors-grey-100)',
+    cursor: 'default',
+  },
+
+  '.title': {
+    fontWeight: 500,
+  },
+  '.description': {
+    fontWeight: 400,
+    color: 'var(--snow-colors-grey-700)',
+  },
+
+  '&.active': {
+    backgroundColor: 'var(--snow-colors-grey-200)',
+  },
+}));
+
+function UserRolePopover({
+  setOpen,
+  open,
+  selectedRole,
+  onRoleSelect,
+}: {
+  setOpen: (value: boolean) => void;
+  open?: boolean;
+  selectedRole: string;
+  onRoleSelect: (role: string) => void;
+}) {
+  return (
+    <Popover placement='bottom-start' open={open} onOpenChange={setOpen}>
+      <PopoverTrigger onClick={() => setOpen(!open)} asChild>
+        <Button
+          variant='outlined'
+          style={{ fontSize: 12 }}
+          suffix={<ChevronDownIcon style={{ width: 14 }} />}
+          noHighlights
+        >
+          {selectedRole}
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent>
+        <Stack
+          style={{ maxHeight: 500, overflowY: 'auto', padding: 4 }}
+          spacing={2}
+        >
+          {UserRoles.map((role) => (
+            <RoleContainer
+              key={role.name}
+              onClick={() => onRoleSelect(role.name)}
+              className={role.name === selectedRole ? 'active' : ''}
+            >
+              <div className='title'>{role.name}</div>
+              <div className='description'>{role.description}</div>
+            </RoleContainer>
+          ))}
+        </Stack>
+      </PopoverContent>
+    </Popover>
+  );
+}
+
+function CustomTriggerDemo() {
   const [open, setOpen] = useState(false);
+  const [selectedRole, setSelectedRole] = useState(UserRoles[0].name);
+  const onRoleSelect = useCallback((roleName: string) => {
+    setSelectedRole(roleName);
+    setOpen(false);
+  }, []);
 
   return (
-    <div>
-      <Popover {...props} open={open} onOpenChange={setOpen}>
-        <PopoverTrigger onClick={() => setOpen((v) => !v)} asChild>
-          <IconButton>
-            <EllipsisHorizontalIcon />
-          </IconButton>
-        </PopoverTrigger>
-        <PopoverContent>
-          <PopoverHeading>My popover heading</PopoverHeading>
-          <PopoverDescription>My popover description</PopoverDescription>
-          <PopoverClose>Close</PopoverClose>
-        </PopoverContent>
-      </Popover>
-    </div>
+    <UserRolePopover
+      open={open}
+      setOpen={setOpen}
+      selectedRole={selectedRole}
+      onRoleSelect={onRoleSelect}
+    />
   );
 }
 
 export const codeConfig: CodeConfigType = {
-  component: DefaultDemo,
+  component: Demo,
   centered: true,
   maxWidth: 440,
   code: defaultCode,
@@ -154,5 +304,5 @@ export const customTriggerCodeConfig: CodeConfigType = {
   centered: true,
   maxWidth: 440,
   code: customTriggerCode,
-  propDefs,
+  propDefs: [],
 };

@@ -1,5 +1,5 @@
 import { CodeConfigType, ComponentPropDefs } from '@/types';
-import { ActionMenu, ActionMenuItem, ActionMenuProps } from '@arctic-kit/snow';
+import { ActionMenuProps, ActionMenu, ActionMenuItem } from '@arctic-kit/snow';
 
 const code = `
 import { ActionMenu, ActionMenuItem } from '@arctic-kit/snow';
@@ -61,10 +61,10 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: ActionMenuProps) {
+export function Demo(props: ActionMenuProps) {
   return (
-    <ActionMenu {...props}>
-      <ActionMenuItem label='Undo' onClick={() => console.log('Undo')} />
+    <ActionMenu label='Edit' {...props}>
+      <ActionMenuItem label='Undo' />
       <ActionMenuItem label='Redo' disabled />
       <ActionMenuItem label='Cut' />
       <ActionMenu label='Copy as' color='success'>

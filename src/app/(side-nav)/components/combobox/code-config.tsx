@@ -189,13 +189,15 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: ComboboxProps) {
+function ControlledDemo(props: ComboboxProps) {
   const [value, setValue] = useState('');
+  return <Combobox {...props} value={value} onChange={setValue} />;
+}
+
+export function Demo(props: ComboboxProps) {
   return (
     <Combobox
       {...props}
-      value={value}
-      onChange={setValue}
       options={[
         'Alfalfa Sprouts',
         'Apple',
@@ -336,7 +338,7 @@ function Demo(props: ComboboxProps) {
 }
 
 export const codeConfig: CodeConfigType = {
-  component: Demo,
+  component: ControlledDemo,
   centered: true,
   maxWidth: 440,
   code,

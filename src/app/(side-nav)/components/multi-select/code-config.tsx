@@ -80,7 +80,19 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: MultiSelectProps) {
+export function Demo(props: MultiSelectProps) {
+  return (
+    <DefautlDemo
+      {...props}
+      value={[
+        { label: 'Green', value: 'green' },
+        { label: 'Blue', value: 'blue' },
+      ]}
+    />
+  );
+}
+
+function DefautlDemo(props: MultiSelectProps) {
   return (
     <MultiSelect
       {...props}
@@ -99,7 +111,7 @@ function Demo(props: MultiSelectProps) {
 }
 
 export const codeConfig: CodeConfigType = {
-  component: Demo,
+  component: DefautlDemo,
   centered: true,
   maxWidth: 440,
   code,
@@ -109,7 +121,7 @@ export const codeConfig: CodeConfigType = {
 };
 
 export const errorStateCodeConfig: CodeConfigType = {
-  component: Demo,
+  component: DefautlDemo,
   centered: true,
   maxWidth: 440,
   code,

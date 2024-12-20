@@ -10,18 +10,35 @@ export async function getDirectoryMeta(
 
   const componentsMeta = await Promise.all(
     folders.map(async (folderName) => {
+      let metaInfo: MetaType = {
+        title: '',
+        subTitle: '',
+        slug: `${featureDir}/${folderName}`, // Use folder name as slug
+      };
+
       const metaFilePath = path.join(rootFeatureDir, folderName, 'meta.ts');
+      const codeConfigPath = path.join(
+        rootFeatureDir,
+        folderName,
+        'code-config.tsx',
+      );
+
+      if (fs.existsSync(codeConfigPath)) {
+        const { Demo } = await import(
+          `../app/(side-nav)/${featureDir}/${folderName}/code-config.tsx`
+        );
+
+        metaInfo.component = Demo;
+      }
 
       if (fs.existsSync(metaFilePath)) {
         const { meta } = await import(
           `../app/(side-nav)/${featureDir}/${folderName}/meta.ts`
         );
 
-        const metaInfo: MetaType = {
-          title: meta.title,
-          subTitle: meta.subTitle,
-          slug: `${featureDir}/${folderName}`, // Use folder name as slug
-        };
+        metaInfo.title = meta.title;
+        metaInfo.subTitle = meta.subTitle;
+
         return metaInfo;
       }
 

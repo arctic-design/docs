@@ -1,6 +1,6 @@
 .actionButton {
-  height: 32px;
-  width: 32px;
+  height: 28px;
+  width: 28px;
   border-radius: 5px;
   border: none;
   color: #eee;
@@ -11,13 +11,56 @@
   justify-content: center;
   background: inherit;
   position: relative;
-  transition: background 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    color 0.2s ease;
 
-  svg {
-    width: 16px;
+  /* Scoped class for Clipboard Icon */
+  .clipboardIcon {
+    width: 14px;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  /* Scoped class for Check Icon */
+  .checkIcon {
+    width: 14px;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+
+  &.clicked {
+    transform: scale(1.1);
+
+    .checkIcon {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .clipboardIcon {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
   }
 
   &:hover {
     color: #fff;
+  }
+
+  &:focus {
+    outline: none;
   }
 }

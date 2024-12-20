@@ -9,13 +9,20 @@ import { Calendar } from '@arctic-kit/snow';
 
 function Demo() {
   const [value, setValue] = useState(new Date());
-  return <Calendar selected={value} onSelect={setValue} />;
+  return <Calendar selected={value} onSelect={setValue} {{props}} />;
 }
 `;
 
-const propDefs: ComponentPropDefs[] = [];
+const propDefs: ComponentPropDefs[] = [
+  {
+    name: 'color',
+    type: 'ddl',
+    values: ['primary', 'secondary', 'success', 'error', 'warning', 'info'],
+    defaultValue: 'primary',
+  },
+];
 
-function Demo(props: CalendarProps) {
+export function Demo(props: CalendarProps) {
   const [value, setValue] = useState(new Date());
   return <Calendar {...props} selected={value} onSelect={setValue} />;
 }

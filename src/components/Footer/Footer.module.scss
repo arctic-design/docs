@@ -1,8 +1,8 @@
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: var(--snow-colors-primary-900);
-  color: var(--snow-colors-white);
+  background-color: var(--snow-colors-neutral-0);
+  color: var(--snow-colors-neutral-1000);
   //   position: fixed;
   width: 100%;
   //   bottom: 0;
@@ -14,14 +14,14 @@
   gap: 6px;
 
   .builtBy {
-    color: var(--snow-colors-white);
+    color: var(--snow-colors-neutral-1000);
     display: flex;
     justify-content: center;
     align-items: center;
     // gap: 4px;
     font-size: 12px;
     a {
-      color: var(--snow-colors-white);
+      color: var(--snow-colors-neutral-1000);
       font-size: 12px;
 
       padding-left: 4px;

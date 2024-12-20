@@ -53,7 +53,11 @@ const propDefs: ComponentPropDefs[] = [
     values: ['small', 'medium', 'large'],
     defaultValue: 'medium',
   },
-
+  {
+    name: 'withSeparator',
+    type: 'boolean',
+    defaultValue: true,
+  },
   {
     name: 'disabled',
     type: 'boolean',
@@ -77,7 +81,7 @@ const propDefs: ComponentPropDefs[] = [
   },
 ];
 
-function Demo(props: RadioGroupProps) {
+export function Demo(props: RadioGroupProps) {
   const [value, setValue] = useState('');
 
   const onChange = (val: OptionType['value']) => {
@@ -86,6 +90,7 @@ function Demo(props: RadioGroupProps) {
 
   return (
     <RadioGroup
+      withSeparator
       {...props}
       id='sample-radio-grp'
       options={[
