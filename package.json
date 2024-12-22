@@ -23,6 +23,7 @@
     "@pigment-css/react": "^0.0.28",
     "@types/mdx": "^2.0.13",
     "clsx": "^2.1.1",
+    "firebase": "^11.1.0",
     "gray-matter": "^4.0.3",
     "isomorphic-dompurify": "^2.19.0",
     "lottie-web": "^5.12.2",
