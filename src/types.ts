@@ -56,3 +56,10 @@ export type SearchableDocument = {
   parentTitle: string;
   parentSlug: string;
 };
+
+export const PageCategory = {
+  Root: 'Root',
+  GettingStarted: 'GettingStarted',
+  Components: 'Components',
+  Foundations: 'Foundations',
+};
