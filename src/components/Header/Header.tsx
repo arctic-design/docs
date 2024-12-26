@@ -28,6 +28,7 @@ export async function Header({ docs, searchIndex }: HeaderProps) {
         <SnowLink href='/getting-started/overview'>Get Started</SnowLink>
         <SnowLink href='/foundations'>Foundations</SnowLink>
         <SnowLink href='/components'>Components</SnowLink>
+        <SnowLink href='/examples'>Examples</SnowLink>
       </section>
       <section className={styles.right}>
         <Searchbar docs={docs} searchIndex={searchIndex} />

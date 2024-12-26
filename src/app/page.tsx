@@ -1,4 +1,4 @@
-import styles from './layout.module.scss';
+import styles from './page.module.scss';
 import { Button, Grid, GridColumn, GridRow } from '@arctic-kit/snow';
 import { Feature } from '@/components/Feature';
 import { LottieAnimation, LottieSkeleton } from '@/components/LottieAnimation';
@@ -8,9 +8,10 @@ import { SnowLink } from '@/components/SnowLink';
 import { Footer } from '@/components/Footer';
 import { ClientLayout } from '@/analytics/ClientLayout';
 import { PageCategory } from '@/types';
-import { ExamplesNavbar } from './navbar';
+import { ExamplesNavbar } from '@/components/ExamplesNavbar';
+import { Examples } from '@/components/Examples/Examples';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.header}>
@@ -100,10 +101,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </ClientLayout>
       </section>
       <section className={styles.examples}>
-        <div className={styles.examplesWrapper}>
-          <ExamplesNavbar />
-          {children}
-        </div>
+        <ExamplesNavbar isRootLayout />
+        <Examples />
       </section>
       <Footer />
     </main>

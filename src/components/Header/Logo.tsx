@@ -8,7 +8,8 @@ import Link from 'next/link';
 export function Logo() {
   const pathname = usePathname();
 
-  const shift = pathname.replaceAll('/', '') !== '';
+  const shift =
+    pathname.replaceAll('/', '') !== '' && !pathname.startsWith('/examples');
 
   return (
     <Link href='/'>
