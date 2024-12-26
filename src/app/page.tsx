@@ -1,21 +1,15 @@
 import styles from './page.module.scss';
-import {
-  Button,
-  Grid,
-  GridColumn,
-  GridRow,
-  SegmentedControl,
-  SegmentedControlButton,
-} from '@arctic-kit/snow';
+import { Button, Grid, GridColumn, GridRow } from '@arctic-kit/snow';
 import { Feature } from '@/components/Feature';
 import { LottieAnimation, LottieSkeleton } from '@/components/LottieAnimation';
 import animationData from '@/assets/lottie/design_system.json';
 import { Suspense } from 'react';
 import { SnowLink } from '@/components/SnowLink';
 import { Footer } from '@/components/Footer';
-import { Examples } from '@/components/Examples/Examples';
 import { ClientLayout } from '@/analytics/ClientLayout';
 import { PageCategory } from '@/types';
+import { ExamplesNavbar } from '@/components/ExamplesNavbar';
+import { Examples } from '@/components/Examples/Examples';
 
 export default function Home() {
   return (
@@ -107,18 +101,7 @@ export default function Home() {
         </ClientLayout>
       </section>
       <section className={styles.examples}>
-        <div className={styles.examplesWrapper}>
-          <SegmentedControl size='large'>
-            <SegmentedControlButton>Examples</SegmentedControlButton>
-            <SegmentedControlButton>Mail</SegmentedControlButton>
-            <SegmentedControlButton>Dashboard</SegmentedControlButton>
-            <SegmentedControlButton>Tasks</SegmentedControlButton>
-            <SegmentedControlButton>Forms</SegmentedControlButton>
-            <SegmentedControlButton>Music</SegmentedControlButton>
-            <SegmentedControlButton>Authentication</SegmentedControlButton>
-          </SegmentedControl>
-        </div>
-
+        <ExamplesNavbar isRootLayout />
         <Examples />
       </section>
       <Footer />

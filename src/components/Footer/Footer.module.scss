@@ -11,6 +11,10 @@
   flex-direction: column;
   gap: 6px;
 
+  p {
+    margin: 0;
+  }
+
   .builtBy {
     color: var(--snow-colors-neutral-1000);
     display: flex;

@@ -5,9 +5,11 @@ import styles from './MetaCards.module.scss';
 export async function MetaCards({
   metaInfo,
   itemMaxWidth,
+  hideViewMore = false,
 }: {
   metaInfo: (MetaType | undefined)[];
   itemMaxWidth?: number | string;
+  hideViewMore?: boolean;
 }) {
   return (
     <div className={styles.container}>
@@ -35,28 +37,30 @@ export async function MetaCards({
             </div>
           );
         })}
-      <div className={styles.item} style={{ maxWidth: itemMaxWidth }}>
-        <div
-          className={styles.componentDisplay}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: 12,
-            textAlign: 'center',
-          }}
-        >
-          <div className={styles.subTitle} style={{ fontSize: 18 }}>
-            View component docs to see more live examples
-          </div>
-          <Link
-            href={`/components/accordion`}
-            style={{ fontSize: 14, fontWeight: 500 }}
+      {!hideViewMore && (
+        <div className={styles.item} style={{ maxWidth: itemMaxWidth }}>
+          <div
+            className={styles.componentDisplay}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: 12,
+              textAlign: 'center',
+            }}
           >
-            View docs
-          </Link>
+            <div className={styles.subTitle} style={{ fontSize: 18 }}>
+              View component docs to see more live examples
+            </div>
+            <Link
+              href={`/components/accordion`}
+              style={{ fontSize: 14, fontWeight: 500 }}
+            >
+              View docs
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
