@@ -6,12 +6,16 @@
   .title {
     font-weight: 900;
     font-size: 2em;
+    margin: 0;
+    padding: 0;
   }
 
   .subTitle {
     color: var(--snow-colors-grey-600);
     font-size: 1.2em;
     line-height: 1.5;
+    margin: 0;
+    padding: 0;
   }
 
   .meta {
@@ -37,6 +41,11 @@
     flex-direction: column;
     gap: 12px;
     padding-top: 2em;
+
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
     .usageContentTitle {
       font-weight: 700;
       font-size: 1.6em;

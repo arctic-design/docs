@@ -1,0 +1,68 @@
+.mailBox {
+  border: 1px solid var(--snow-colors-grey-400);
+  height: 100%;
+  border-radius: 4px;
+  // overflow-y: hidden;
+  display: flex;
+  font-size: 14px;
+  min-width: 960px;
+  overflow-x: auto;
+  width: 100%;
+  max-height: 100vh;
+
+  .content,
+  .header {
+    padding: 8px;
+    svg {
+      width: 16px;
+    }
+  }
+
+  .header {
+    border-bottom: 0.5px solid var(--snow-colors-grey-400);
+    position: sticky;
+    top: 0;
+    background-color: var(--snow-colors-neutral-0);
+  }
+
+  .sidebar,
+  .list {
+    border-right: 0.5px solid var(--snow-colors-grey-400);
+  }
+
+  .sidebar {
+    width: 20%;
+    max-width: 220px;
+    a {
+      color: var(--snow-colors-neutral-1000);
+      text-decoration: none;
+    }
+  }
+
+  .list {
+    width: 40%;
+    max-width: 400px;
+    overflow-y: auto;
+  }
+
+  .list,
+  .detail {
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+  }
+
+  .detail {
+    flex: 1;
+
+    .itemActions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 4px;
+    }
+  }
+}

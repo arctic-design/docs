@@ -15,23 +15,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@arctic-kit/colors@npm:^0.29.0":
-  version: 0.29.0
-  resolution: "@arctic-kit/colors@npm:0.29.0"
-  checksum: 10c0/d80572dcd98c0f43d64a81cf09d6dba038f84f78cab358131c4db1f372904bf3ab4086920a8ecc840b25cccc7ab19a0f429af9e77d87a97cc78fc248f6a29fc3
+"@arctic-kit/colors@npm:^0.30.0":
+  version: 0.30.0
+  resolution: "@arctic-kit/colors@npm:0.30.0"
+  checksum: 10c0/2f35ec24af17c3354393110bf78ac0967459e84f7346fa75eeae35de70bc33841a174a37d1c4366717209414266fc86dded8e39d1e2e4bec0b0769709b605c18
   languageName: node
   linkType: hard
 
-"@arctic-kit/icons@npm:^0.29.0":
-  version: 0.29.0
-  resolution: "@arctic-kit/icons@npm:0.29.0"
-  checksum: 10c0/8a6031aff75ac73f932155b1b6b35ca9f8c0192baffb52143038804318ee00a4550cdb2ac991fffee681105966210a92f2d7e130f7df57523e1bf85b9b8ec160
+"@arctic-kit/icons@npm:^0.30.0":
+  version: 0.30.0
+  resolution: "@arctic-kit/icons@npm:0.30.0"
+  checksum: 10c0/fbd283c4e609f1ee50168ab378e593fce941d0302414a36249ff54f8455ffb1d40d7663eede24f02c3dfad2ae45d1f57b1b702c5c8dcc762d10804bfe6968f2f
   languageName: node
   linkType: hard
 
-"@arctic-kit/snow@npm:^0.29.0":
-  version: 0.29.0
-  resolution: "@arctic-kit/snow@npm:0.29.0"
+"@arctic-kit/snow@npm:^0.30.0":
+  version: 0.30.0
+  resolution: "@arctic-kit/snow@npm:0.30.0"
   peerDependencies:
     "@floating-ui/react": ^0.26.25 || ^0.27.0
     framer-motion: ^11.11.9
@@ -42,7 +42,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/d108fd0100e1cc4f8dd778200604bdca5b3a9fb5a508305eb38da851240b1f9130a845a967f34651c4be8f93d52beb3e23f2e2d9287e913588d202ec7eead9f8
+  checksum: 10c0/7b4807119e253d9f31001008cd3329ddf24529207fa58e83284cb4bc96e04af6f00e6ac869e3eadaee68afabd0ae8febedbf9bf169fded18a3245388de5bb7e2
   languageName: node
   linkType: hard
 
@@ -5067,9 +5067,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "docs@workspace:."
   dependencies:
-    "@arctic-kit/colors": "npm:^0.29.0"
-    "@arctic-kit/icons": "npm:^0.29.0"
-    "@arctic-kit/snow": "npm:^0.29.0"
+    "@arctic-kit/colors": "npm:^0.30.0"
+    "@arctic-kit/icons": "npm:^0.30.0"
+    "@arctic-kit/snow": "npm:^0.30.0"
     "@floating-ui/react": "npm:^0.27.0"
     "@mdx-js/loader": "npm:^3.1.0"
     "@mdx-js/react": "npm:^3.1.0"

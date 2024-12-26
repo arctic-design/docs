@@ -11,7 +11,7 @@ export default async function Index() {
     <div className={styles.container}>
       <Content />
       <div className={styles.codeBlocks}>
-        <MetaCards metaInfo={metaInfo} itemMaxWidth='100%' />
+        <MetaCards metaInfo={metaInfo} itemMaxWidth='100%' hideViewMore />
       </div>
     </div>
   );

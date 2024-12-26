@@ -24,11 +24,6 @@
     color: var(--snow-colors-primary-main);
   }
 
-  &:active,
-  &:focus {
-    color: var(--snow-colors-primary-700);
-  }
-
   &:active {
     outline-color: var(--snow-colors-primary-main);
   }

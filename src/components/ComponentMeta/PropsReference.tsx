@@ -44,9 +44,11 @@ export function PropsReference({ componentDoc }: { componentDoc: any }) {
 
             return (
               <Table.Row key={`${propName}-${index}`}>
-                <Table.Cell>{propName}</Table.Cell>
                 <Table.Cell>
-                  <div className={styles.tableCellData}>
+                  <code>{propName}</code>
+                </Table.Cell>
+                <Table.Cell>
+                  <code className={styles.tableCellData}>
                     {propType || ''}
                     {hasSingleEnumType && (
                       <Tooltip message={enumValues.join(', ')}>
@@ -55,9 +57,11 @@ export function PropsReference({ componentDoc }: { componentDoc: any }) {
                         </span>
                       </Tooltip>
                     )}
-                  </div>
+                  </code>
                 </Table.Cell>
-                <Table.Cell>{defaultValue}</Table.Cell>
+                <Table.Cell>
+                  {defaultValue !== '---' && <code>{defaultValue}</code>}
+                </Table.Cell>
               </Table.Row>
             );
           })}
