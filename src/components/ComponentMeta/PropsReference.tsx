@@ -59,7 +59,11 @@ export function PropsReference({ componentDoc }: { componentDoc: any }) {
                   </code>
                 </Table.Cell>
                 <Table.Cell>
-                  {defaultValue !== '---' && <code>{defaultValue}</code>}
+                  {defaultValue !== '---' ? (
+                    <code>{defaultValue}</code>
+                  ) : (
+                    defaultValue
+                  )}
                 </Table.Cell>
               </Table.Row>
             );

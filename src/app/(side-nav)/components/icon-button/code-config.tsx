@@ -1,15 +1,15 @@
 import { CodeConfigType, ComponentPropDefs } from '@/types';
 import { IconButton, IconButtonProps } from '@arctic-kit/snow';
-import { FaceSmileIcon } from '@arctic-kit/icons/solid';
+import { Square3Stack3dIcon } from '@arctic-kit/icons';
 
 const code = `
-import { FaceSmileIcon } from '@arctic-kit/icons/solid';
+import { Square3Stack3dIcon } from '@arctic-kit/icons';
 import { IconButton } from '@arctic-kit/snow';
 
 function Demo() {
   return (
     <IconButton {{props}}>
-      <FaceSmileIcon />
+      <Square3Stack3dIcon />
     </IconButton>
   );
 }
@@ -48,7 +48,7 @@ const propDefs: ComponentPropDefs[] = [
 function Demo(props: IconButtonProps) {
   return (
     <IconButton {...props}>
-      <FaceSmileIcon />
+      <Square3Stack3dIcon />
     </IconButton>
   );
 }
