@@ -1,5 +1,3 @@
-'use client';
-import { motion } from 'framer-motion';
 import styles from './Feature.module.css';
 import { SnowLink } from '../SnowLink';
 
@@ -14,12 +12,7 @@ export const Feature: React.FC<FeatureProps> = ({
   description,
   href,
 }) => (
-  <motion.div
-    className={styles.feature}
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-  >
+  <div className={styles.feature}>
     {href ? (
       <SnowLink href={href}>
         <h2>{title}</h2>
@@ -28,5 +21,5 @@ export const Feature: React.FC<FeatureProps> = ({
       <h2>{title}</h2>
     )}
     <p>{description}</p>
-  </motion.div>
+  </div>
 );

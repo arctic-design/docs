@@ -1,4 +1,3 @@
-'use client';
 import styles from './Table.module.scss';
 import { InformationCircleIcon } from '@arctic-kit/icons';
 import { Tooltip, Table } from '@arctic-kit/snow';
@@ -60,7 +59,11 @@ export function PropsReference({ componentDoc }: { componentDoc: any }) {
                   </code>
                 </Table.Cell>
                 <Table.Cell>
-                  {defaultValue !== '---' && <code>{defaultValue}</code>}
+                  {defaultValue !== '---' ? (
+                    <code>{defaultValue}</code>
+                  ) : (
+                    defaultValue
+                  )}
                 </Table.Cell>
               </Table.Row>
             );

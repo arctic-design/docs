@@ -1,4 +1,3 @@
-'use client';
 import { CodeConfigType, ComponentPropDefs } from '@/types';
 import { Table, TableRootProps } from '@arctic-kit/snow';
 

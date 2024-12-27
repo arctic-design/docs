@@ -6,7 +6,7 @@ import { analytics } from '@/analytics/firebase';
 import { logEvent } from 'firebase/analytics';
 
 interface AnalyticsProviderProps {
-  children: ReactNode;
+  children?: ReactNode;
   category: string;
 }
 

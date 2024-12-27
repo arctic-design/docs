@@ -1,6 +1,6 @@
 import styles from './page.module.scss';
 
-import { Mailbox } from './Mailbox';
+import { Mailbox } from '@/components/Examples/Mailbox';
 
 export default function Page() {
   return (
