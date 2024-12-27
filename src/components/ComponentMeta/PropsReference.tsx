@@ -1,4 +1,3 @@
-'use client';
 import styles from './Table.module.scss';
 import { InformationCircleIcon } from '@arctic-kit/icons';
 import { Tooltip, Table } from '@arctic-kit/snow';

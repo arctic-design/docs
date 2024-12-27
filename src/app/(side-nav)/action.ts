@@ -27,8 +27,8 @@ export async function fetchComponentDocs() {
   const packageJsonContent = readFileSync(packageJsonPath, 'utf-8');
   const packageJson = JSON.parse(packageJsonContent);
 
-  const snowVersionRaw = packageJson.dependencies['@arctic-kit/snow'];
-  ('latest');
+  const snowVersionRaw =
+    packageJson.dependencies['@arctic-kit/snow'] || 'latest';
 
   // Clean the version string to remove any non-numeric prefix (e.g., "^4.2.0" -> "4.2.0")
   const cleanedSnowVersion = snowVersionRaw.replace(/^[^\d]+/, '');

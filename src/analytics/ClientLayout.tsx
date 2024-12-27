@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { AnalyticsProvider } from './AnalyticsProvider';
 
 interface ClientLayoutProps {
-  children: ReactNode;
+  children?: ReactNode;
   category: string;
 }
 
